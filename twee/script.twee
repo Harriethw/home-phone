@@ -1,0 +1,58 @@
+:: UserScript [script]
+//add passage to browser history
+$(window).on('sm.passage.hidden', function (e, data)
+{
+    window.story.checkpoint(data?.passage?.name);
+});
+//add back button to every page
+// let backButtonAdded = false;
+// $(window).on('sm.passage.hidden', function (eventObject, passageObject) {
+// 		if (passageObject.passage && !backButtonAdded) {
+// 			var backButton = window.story.render("backButton");
+
+// 			var header = document.createElement('DIV');
+// 			$(header)
+// 					.attr('id', 'myHeader')
+// 					.appendTo('html')
+// 					.append( backButton );
+// 			backButtonAdded = true;
+// 		}
+// });
+//fade in
+$(window).on('sm.passage.showing', function(event, passage) {
+    $("tw-passage").hide();
+    $("img").hide();
+    $(".cover").hide();
+});
+$(window).on('sm.passage.shown', function(event, passage) {
+    $("tw-passage").show();
+    $("#passage-fade").addClass("fade-in");
+    $("img").addClass("fade-in");
+    $(".cover").addClass("fade-in");
+    $(".chapter-box").addClass("fade-in");
+});
+
+//fade out
+$("tw-passage").on('click', function(e) {
+    var destination 
+    function showDestination(){
+        window.story.show(destination);
+    }
+
+    e.stopPropagation();
+    e.preventDefault();
+    
+    $("img").addClass("fade-out");
+    $(".cover").addClass("fade-out");
+
+    if ($(e.target).data('passage')) {
+        destination = $(e.target).data('passage');
+        $(".chapter-box").addClass("fade-out");
+        window.setTimeout( showDestination, 1000 );
+    } else if ($(".passage-link").data('passage')) {
+        destination = $(".passage-link").data('passage');
+        $("#passage-fade").addClass("fade-out");
+        window.setTimeout( showDestination, 1000 );
+        }           
+});
+  

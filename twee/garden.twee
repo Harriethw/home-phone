@@ -1,0 +1,109 @@
+:: StoryTitle
+Garden
+
+
+:: StoryData
+{
+	"ifid": "FF3E68C6-F882-49CA-96CE-0BF116E1FFD0",
+	"format": "Snowman",
+	"format-version": "2.0.2",
+	"start": "Home",
+	"zoom": 1
+}
+
+
+
+:: Home {"position":"567,386","size":"100,100"}
+<% 
+    s.garden = "false";
+    s.nasturtiums = "false";
+    s.rose = "false";
+    s.weeds = "false";
+    s.end = "false";
+%>
+    <div aria-hidden="true" class="cover"></div>
+    <img alt="a blowsy close up of a wild pink rose, floating on a white background with a grid of grey dots on it" src="rose_cutout.png" class="image-left"/>
+<%= window.story.render("chapters") %>
+    <img aria-hidden="true" class="blob left" src="blob_left.png"/>
+    <img aria-hidden="true" src="blob_right.png" class="blob image-right" style="top: 0;"/>
+    <img aria-hidden="true" class="blob" src="blob_center.png"/>
+    <footer>
+        <p>made by <a src="https://mas.to/@harriethw">HarrietHW</a>, in association with <a src="https://www.control-shift.network/artwork.html?artwork=can-a-website-be-a-garden">Control Shift</a> and <a src="https://containermagazine.co.uk/poem-garden/">Container Mag</a></p>
+        <p>this garden is hosted from a living room in Bristol, UK. It is a DIY <a src="https://areyoubeingserved.constantvzw.org/Summit_afterlife.xhtml">feminist server</a>.
+        <p>it is built with <a src="http://www.motoslave.net/tweego/">Tweego</a></p>
+    </footer>
+
+:: the garden 3
+<a class="passage-link" data-passage="the garden 4">
+<div id="passage-fade">
+    <p>I started gardening for the first time this spring.</p>
+    <p>I had tucked away a few rustling paper packets of seeds in a forgotten cupboard. </p>
+    <p>Their labels read like magic spells - sunflowers, mange tout, kale, radishes - each seed a different size, colour and weight. </p>
+    [[<span aria-label="next page" class="button__next">...</span>->the garden 4]]
+</div>
+    <img aria-hidden="true" src="blob_left.png" style="width: 100px; position: absolute; left: 0; top: 10px;">
+    <img aria-hidden="true" src="blob_right.png" style="width: 100px; position: absolute; z-index: -1; bottom: 200px;">
+    <img alt="a grainy close up of a mange tout growing with a delicate white flower half covering it" src="beans_cutout.png" alt="" class="image-right ">
+</a>
+
+:: the garden 4
+<a class="passage-link" data-passage="the garden 5">
+<div id="passage-fade">
+<p>I did not think that such small things, so dry and still, could produce anything.</p>
+[[<span aria-label="next page" class="button__next">...</span>->the garden 5]]
+<!-- <p>Surely I would need some special equipment or formula to coax a plant out of them.</p> -->
+</div>
+</a>
+
+:: the garden 5
+<a class="passage-link" data-passage="the garden 6">
+<img alt="" src="beans_wall.webp" class="image-left" style="transform: rotate(0deg);" />
+<img alt="" src="beans_wall.webp" class="image-right" style="transform: rotate(0deg);" />
+<div id="passage-fade">
+<p>I put them in soil and I watered them and left them in a sunny spot.</p>
+<p>In less than a week there was something happening.</p> 
+<p>One day bare earth, the next day a green shoot.</p>
+[[<span aria-label="next page" class="button__next">...</span>->the garden 6]]
+</div>
+<a>
+
+:: the garden 6
+<div id="passage-fade">
+<p>Life was bursting out under the soil and over it.</p>
+<p>Every day a new leaf or more growth, bending towards the sun.</p>
+</div>
+<img alt="" src="beans_left_cutout.webp" class="image-left" style="transform: rotate(0deg);" />
+<img alt="" src="beans_right_cutout.webp" class="image-right" style="transform: rotate(0deg);" />
+<% s.garden = "true" %>
+    <%= window.story.render("chapters") %>
+
+
+:: backButton
+<a href="javascript: window.history.back();"><-</a>
+
+:: carousel
+<div class="carousel-container"><h1 class="carousel">WORK IN PROGRESS</h1></div>
+
+:: chapters
+
+<% if(s.garden == "false"){ %>
+<div class="row-box">
+    <div class="chapter-box">[[the garden->the garden 3]]</div>
+</div>
+<% } %>
+<div class="row-box">
+<% if(s.nasturtiums == "false"){ %>
+    <div class="chapter-box">[[the nasturtiums]]</div>
+<% } %>
+<% if(s.rose == "false"){ %>
+    <div class="chapter-box">[[the rose bush]]</div> 
+<% } %>
+<% if(s.weeds == "false"){ %>
+    <div class="chapter-box">[[the weeds]]</div>
+<% } %>
+</div>
+<div class="row-box">
+<% if(s.end == "false"){ %>
+    <div class="chapter-box">[[the end]]</div>
+<% } %>
+</div> 

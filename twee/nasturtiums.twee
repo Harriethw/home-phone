@@ -1,0 +1,67 @@
+:: the nasturtiums {"position":"592,235","size":"100,100"}
+<a class="passage-link" data-passage="the nasturtiums 2">
+<div id="passage-fade">
+<p>The nasturtiums and their grasping, insistent, joyful reaching out for light and space. 
+Generating leaf after leaf, tiny star-like pops of green that unfurled like parasols 
+around their beautiful flowers.</p>
+[[<span aria-label="next page" class="button__next">...</span>->the nasturtiums 2]]
+</div>
+    <img alt="a joyful spread of nasturtiums in the sun" src="nasturtiums_bush.png" class="image-bottom" />
+    <!-- <img alt="" src="nasturtiums_bee_cutout.webp" class="image-right" /> -->
+</a>
+
+:: the nasturtiums 2
+<a class="passage-link" data-passage="the nasturtiums 3">
+<div id="passage-fade">
+<p>The red-orange is almost incandescent, unlike any red, 
+unlike any orange, with a powdery depth to it that nothing
+ else I saw in my life had.</p>
+[[<span aria-label="next page" class="button__next">...</span>->the nasturtiums 3]]
+</div>
+    <img alt="close ups of red grainy flowers rotating" src="nasturtiums_flower_cutout_2.webp" class="image-hover">
+    <img aria-hidden="true" src="nasturtiums_flower_cutout_1.webp" class="image-hover image-right">
+    <!-- <img src="nasturtiums_flower_cutout_2.webp" class="image-fade image-hover image-right"> -->
+    <!-- <img alt="" src="nasturtiums_border.webp" class="image-right " style="
+    top: 1vh;
+    right: -7vw;
+    height: 70%;
+    transform: none;
+    "/> -->
+    <img aria-hidden="true" src="nasturtiums_2.png" class="image-left"/>
+</a>
+
+:: the nasturtiums 3
+<a class="passage-link" data-passage="the nasturtiums 4">
+<div id="passage-fade">
+<p>The bees assidiously visit one bloom after another, rooting deep into the yellow trumpet of the flower, 
+their little legs sticking out with their soft jodphurs of blossom. </p>
+[[<span aria-label="next page" class="button__next">...</span>->the nasturtiums 4]]
+</div>
+    <img aria-hidden="true" src="nasturtiums_border.webp" class="image-right">
+    <img alt="a bumble bee landing on a red flower" src="nasturtiums_bee_cutout.webp" class="image-left" />
+</a>
+
+:: the nasturtiums 4
+<a class="passage-link" data-passage="the nasturtiums 5">
+<div id="passage-fade">
+<p>I feel that to be in the garden is to be embedded in the real, the present moment, the ever-changing now. Not a story of the real, or a transmuted vision of reality. I can feel and hear and touch and smell. </p>
+[[<span aria-label="next page" class="button__next">...</span>->the nasturtiums 5]]
+</div>
+    <img alt="" src="nasturtiums_yellow_full.webp"  />
+    <img alt="" src="nasturtiums_yellow_cutout.webp" class="image-left " />
+    <img alt="" src="nasturtiums_yellow_cutout.webp" class="image-right " />
+</a>
+
+:: the nasturtiums 5
+<div id="passage-fade">
+<p>The plants knew nothing, 
+but they knew enough to turn towards the light, to spread out, 
+sometimes curling around another stem as tight as a noose, 
+to fling themselves up, and up and up.</p>
+<% s.nasturtiums = "true" %>
+</div>
+    <img aria-hidden="true" src="nasturtiums_leaf_1.webp" class="image-bottom image-fade image-hover" style="width: 50vh; z-index: 0;">
+<%= window.story.render("chapters") %>
+    <img aria-hidden="true" src="nasturtiums_leaf_2.webp" class="image-fade image-left">
+    <img aria-hidden="true" src="nasturtiums_border.webp" class="image-left ">
+    <img aria-hidden="true" src="nasturtiums_variegated.webp" class="image-right " />

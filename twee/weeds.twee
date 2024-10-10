@@ -1,0 +1,77 @@
+
+:: the weeds {"position":"718,529","size":"100,100"}
+<a class="passage-link" data-passage="the weeds 2">
+<div id="passage-fade">
+    <img aria-hidden="true" src="weeds_poppy_cutout.webp" class="image-right " style="z-index: 0;">
+<p>What's more delightful than a green shoot coming through the cracks of a paving stone?</p>
+<p>While our attention was elsewhere, </br>
+on the seedlings and the plants we intended to grow,</br>
+there were surprises biding their time around the edges of old paving stones.</p>
+[[<span aria-label="next page" class="button__next">...</span>->the weeds 2]]
+</div>
+    <img alt="a curly-leafed big pink poppy and a group of daisies and weeds are collaged in the background" src="weeds_daisy_floor.webp" class="image-bottom " style="width:100vw" />
+</a>
+
+:: the weeds 2{"position":"718,529","size":"100,100"}
+<a class="passage-link" data-passage="the weeds 3">
+<div id="passage-fade">
+<div>
+<p>We noticed a small blue lobelia here, a stem of pretty grass there, </br>
+a cluster of daisies, a rococo poppy. </p>
+</div>
+<div>
+</div>
+<img aria-hidden="true" src="weeds_poppy_cutout.webp" class="image-left image-fade" style="z-index: -1;">
+<img alt="a cutout close up of a daisy and a lobelia spin in the center of the screen" src="weeds_daisy_lobelia_cutout.webp" class="image-bottom image-fade image-hover" style="" />
+</div>
+[[<span aria-label="next page" class="button__next">...</span>->the weeds 3]]
+</a>
+
+:: the weeds 3{"position":"718,529","size":"100,100"}
+<a class="passage-link" data-passage="the weeds 4">
+<div id="passage-fade">
+<p>I enjoy crouching and looking at the detail, the intricacy of these tiny plant outposts. </p>
+[[<span aria-label="next page" class="button__next">...</span>->the weeds 4]]
+</div>
+    <img alt="a full portrait photo of weeds in sprawling bloom in strong sunlight" src="weeds_daisies_full.png" class="image-full " />
+</a>
+
+:: the weeds 4{"position":"718,529","size":"100,100"}
+<a class="passage-link" data-passage="the weeds 5">
+<div id="passage-fade">
+<p>Neighbors of herb robert, lobelia, white hawkweed and groundswell jostle each other as they spring out towards open air.</p>
+[[<span aria-label="next page" class="button__next">...</span>->the weeds 5]]
+</div>
+    <img aria-hidden="true" src="weeds_toadflax_cutout.webp" class="image-fade image-left" />
+    <img alt="a clost up of flowers in a circle" src="weeds_circle.webp" class="image-fade image-right" />
+</a>
+
+:: the weeds 5{"position":"718,529","size":"100,100"}
+<a class="passage-link" data-passage="the weeds 6">
+<div id="passage-fade">
+<p>The violet lobelias spread out as the season goes on, a crowd of them blooming large in a corner.</p>
+<p>The white collars on their dresses hang delicately in the breeze. </p>
+[[<span aria-label="next page" class="button__next">...</span>->the weeds 6]]
+</div>
+    <img aria-hidden="true" src="weeds_lobelia_cutout.webp"  style="position: absolute; z-index: -1; transform: rotate(180deg);" />
+    <img aria-hidden="true" src="weeds_lobelia_cutout.webp"  style="position: absolute; z-index: -1; left: -20vw;" />
+    <img alt="a trio of lobelia flowers in extreme close up line the background" src="weeds_lobelia_cutout.webp"  style="position: absolute; z-index: -1; rotate(-180deg); right: -20vw;" />
+</a>
+
+:: the weeds 6{"position":"718,529","size":"100,100"}
+<div id="passage-fade">
+<p>I love the sheer chance of the weeds. A stray seed blown on the wind or caught on a foot, finding just the right hold on life to grow.</p>
+<!-- <p>What I saw as barren stone, a small flattened out square of space, a literal blank slate, even this had a history beneath it.</p> -->
+<p>Someone else has sown a seed here, there have been other seasons and other stories, and I am a small visitor alongside the daisy, the bee and the ant.</p>
+</div>
+    <img aria-hidden="true" src="weeds_flower_cutout.webp" class="image-bottom-right " />
+    <img aria-hidden="true" src="weeds_pink_cutout.webp" class="image-top image-hover" />
+    <img aria-hidden="true" src="weeds_pink_cutout.webp" class="image-left image-hover" />
+    <img alt="a huge pink flower spins in the background"  src="weeds_toadflax_cutout.webp" class="image-bottom " />
+<% s.weeds = "true" %>
+<%= window.story.render("chapters") %>
+
+
+
+
+
