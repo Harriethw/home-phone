@@ -3,14 +3,14 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
-		<title>Garden</title>
+		<title>Home Phone</title>
 		<style>
 		/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}details,main,tw-passage{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;color:#222;text-decoration-color:#ccc}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template,tw-storydata{display:none}body{font:1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;color:#222;margin:.5em}tw-story{max-width:35em;margin:0 auto;line-height:150%;display:block}a:hover{color:#cc8929;text-decoration-color:#cc8929}a:active{color:#ffb040;text-decoration-color:#cc8929}@media screen and (max-width:480px){#passage{font-size:70%}}
 		</style>
 	</head>
 	<body>
 		<tw-story tags></tw-story>
-		<!-- UUID://FF3E68C6-F882-49CA-96CE-0BF116E1FFD0// --><tw-storydata name="Garden" startnode="8" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="FF3E68C6-F882-49CA-96CE-0BF116E1FFD0" zoom="1" format="Snowman" format-version="2.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">a {
+		<!-- UUID://FF3E68C6-F882-49CA-96CE-0BF116E1FFD0// --><tw-storydata name="Home Phone" startnode="2" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="FF3E68C6-F882-49CA-96CE-0BF116E1FFD0" zoom="1" format="Snowman" format-version="2.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">a {
     width: 100%;
     height: 100%;
     cursor: pointer;
@@ -33,12 +33,13 @@ a:active {
 
 body {
     font: 18px;
-    font-family: Courier New, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     color: #222;
     background: white;
-    background-image: radial-gradient(#D3D3D3 2px, transparent 0);
-    background-size: 60px 60px;
+    background-size: 40px 40px;
     background-position: -19px -19px;
+    background-image: linear-gradient(to right, #F5F5F5 1px, transparent 1px),
+        linear-gradient(to bottom, #F5F5F5 1px, transparent 1px);
 }
 
 .button__next {
@@ -80,18 +81,20 @@ body {
     width: 140px;
     height: 140px;
     background: white;
-  
-    border-radius: 50%;
     border-color: black;
     border-style: solid;
     border-width: 1px;
     padding: 0.8em;
     text-align: center;
+    margin: 1em;
 }
 
 .chapter-box:hover {
-    color: black;
-    background: orange;
+    background: blue;
+}
+
+.chapter-box:hover a {
+    color: white;
 }
 
 .cover {
@@ -100,7 +103,7 @@ body {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background: url("./sunflower_branches.png");
+    background: url("./norman_cottage.webp");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -2;
@@ -204,21 +207,25 @@ img {
     line-height: 145%;
 }
 
-p {
-    border-radius: 2em;
+.block {
+    /* border-radius: 2em; */
     border-color: black;
     border-style: solid;
     border-width: 1px;
     padding: 0.8em;
     background: white;
     z-index: 2;
+    p {
+        font-size: medium;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
 }
 
 .passage {
-    border-radius: 2em;
     border-color: black;
     padding: 0.8em;
-    padding-top: 4em;
+    padding-top: 1em;
     /* background: transparent; */
     /* transition: background 1s linear; */
 }
@@ -333,298 +340,92 @@ $("tw-passage").on('click', function(e) {
         $("#passage-fade").addClass("fade-out");
         window.setTimeout( showDestination, 1000 );
         }           
-});</script><tw-passagedata pid="1" name="the end" tags="" position="100,100" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the end 2&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;
-    When I first began, at the beginning of spring, 
-    I felt I could control life, what grew when and how. &lt;/br&gt;
-    I feared failure and relished any seeming win.
-&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the end 2]]
+});</script><tw-passagedata pid="1" name="chapters_downstairs" tags="" position="100,100" size="100,100">&lt;div class=&quot;row-box&quot;&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[the sitting room]]&lt;/div&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[the kitchen]]&lt;/div&gt;
 &lt;/div&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="2" name="the end 2" tags="" position="225,100" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the end 3&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;
-    The weeks that followed mellowed that feeling, 
-    with each new insect population I encountered, 
-    or days of rain, or weeks of heat.
-&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the end 3]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="the end 3" tags="" position="350,100" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the end 4&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;
-    I am a part of a larger network.&lt;/br&gt;
-    A white root seeking in the dark, a green leaf emerging.
-&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the end 4]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="the end 4" tags="" position="475,100" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the end 5&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;
-with September came the last of growth. &lt;/br&gt;
-&lt;!-- Red tomatoes ripened on the vine, while their leaves turned brown.
-Leaves began to fall down into our courtyard from a neighboring tree, 
-cluttering in corners and skittering drily. --&gt;
-It wasn&#39;t the end.&lt;/br&gt;
-&lt;/p&gt;
-&lt;p&gt;
-Cutting back, cutting down, piling up the weeds and the leaves&lt;/br&gt;
-Covering them with compost&lt;/br&gt;
-And laying cardboard on top, &lt;/br&gt;
-I drew a line under my work that summer.&lt;/br&gt;
-&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the end 5]]
-
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="the end 5" tags="" position="600,100" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;Home&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;
-I leave the garden to the worms&lt;/br&gt;
-and the mycelium &lt;/br&gt;
-and the ants &lt;/br&gt;
-and the woodlice,&lt;/br&gt;
-the dark soil-workers and the beasties,&lt;/br&gt;
-to feed, sleep and dance through the winter,&lt;/br&gt;
-until I disturb them again in the spring.
-&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;Home]]
-
-&lt;/div&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="6" name="the beans" tags="" position="474,533" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="the earth" tags="" position="342,397" size="100,100">I gave away some seedlings, and planted as many I as I thought possible in our small beds. 
-Some thrived, but more were eaten by slugs and snails. 
-The first thing I&#39;d do in the morning was hurry to check on the plants in the garden, and I&#39;d find the decimation wrought over night. The tell-tale shining trails glistened next to stringy stubs of leaves, the only trace left of the visitors that had come in the dark. 
-
-I tried different plants and different spots, and noticed what happened, 
-and things started to last longer. 
-I realised the small courtyard was 
-filled with life. A handful of earth sifted to reveal wriggling worms. 
-A pot moved to surprise a small colony of woodlice, spiders and other 
-creepy crawlies underneath. 
-Ants were busy ferrying too and fro across the flagstones. 
-A pair of sparrows visited daily to eat the greenfly on a wild rose bush.
-
-Bees loved to visit a shrub I had wanted to get rid of. 
-I realised what I had thought were ugly spindly branches with ungenerous dry berries, had bloomed into a thriving part of the tiny ecosystem of the garden. 
-
-Seeing the thousands of little insects and the dozens of plants in 
-what I thought was a relatively barren patch of land is humbling. 
-I&#39;m in awe at the abundance of the world, it&#39;s complexity, 
-it&#39;s unsentimentality, and the fragile interconnectedness of it all.
-    &lt;img alt=&quot;&quot; src=&quot;poppies_page.png&quot; class=&quot;page-bean&quot; /&gt;
-    &lt;img alt=&quot;&quot; src=&quot;poppies_bud_1.png&quot; class=&quot;image-left&quot; /&gt;</tw-passagedata><tw-passagedata pid="8" name="Home" tags="" position="567,386" size="100,100">&lt;% 
-    s.garden = &quot;false&quot;;
-    s.nasturtiums = &quot;false&quot;;
-    s.rose = &quot;false&quot;;
-    s.weeds = &quot;false&quot;;
-    s.end = &quot;false&quot;;
-%&gt;
-    &lt;div aria-hidden=&quot;true&quot; class=&quot;cover&quot;&gt;&lt;/div&gt;
-    &lt;img alt=&quot;a blowsy close up of a wild pink rose, floating on a white background with a grid of grey dots on it&quot; src=&quot;rose_cutout.png&quot; class=&quot;image-left&quot;/&gt;
-&lt;%= window.story.render(&quot;chapters&quot;) %&gt;
+&lt;div class=&quot;row-box&quot;&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[go upstairs-&gt;the landing]]&lt;/div&gt; 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Home" tags="" position="567,386" size="100,100">&lt;div aria-hidden=&quot;true&quot; class=&quot;cover&quot;&gt;&lt;/div&gt;
+    &lt;h2&gt;Welcome to my home!&lt;/h2&gt;
+    &lt;div class=&quot;block&quot;&gt;
+        &lt;p&gt;come in, please come in, it&#39;s so nice to have a visitor.&lt;/p&gt;
+        &lt;p&gt;i&#39;ll shut the door behind you, let me hang your coat up&lt;/p&gt;
+        &lt;p&gt;would you like a tour of the house? I&#39;d love to show you around&lt;/p&gt;
+        &lt;p&gt;if you could take your shoes off first, thank you&lt;/p&gt;
+        &lt;p&gt;don&#39;t mind the ghosts if you see any&lt;/p&gt;
+        &lt;p&gt;so, where shall we start?&lt;/p&gt;
+    &lt;/div&gt;
+&lt;%= window.story.render(&quot;chapters_downstairs&quot;) %&gt;
     &lt;img aria-hidden=&quot;true&quot; class=&quot;blob left&quot; src=&quot;blob_left.png&quot;/&gt;
     &lt;img aria-hidden=&quot;true&quot; src=&quot;blob_right.png&quot; class=&quot;blob image-right&quot; style=&quot;top: 0;&quot;/&gt;
     &lt;img aria-hidden=&quot;true&quot; class=&quot;blob&quot; src=&quot;blob_center.png&quot;/&gt;
     &lt;footer&gt;
-        &lt;p&gt;made by &lt;a src=&quot;https://mas.to/@harriethw&quot;&gt;HarrietHW&lt;/a&gt;, in association with &lt;a src=&quot;https://www.control-shift.network/artwork.html?artwork=can-a-website-be-a-garden&quot;&gt;Control Shift&lt;/a&gt; and &lt;a src=&quot;https://containermagazine.co.uk/poem-garden/&quot;&gt;Container Mag&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;made by &lt;a src=&quot;https://mas.to/@harriethw&quot;&gt;HarrietHW&lt;/a&gt;&lt;/p&gt;
         &lt;p&gt;this garden is hosted from a living room in Bristol, UK. It is a DIY &lt;a src=&quot;https://areyoubeingserved.constantvzw.org/Summit_afterlife.xhtml&quot;&gt;feminist server&lt;/a&gt;.
         &lt;p&gt;it is built with &lt;a src=&quot;http://www.motoslave.net/tweego/&quot;&gt;Tweego&lt;/a&gt;&lt;/p&gt;
-    &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="9" name="the garden 3" tags="" position="1100,100" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the garden 4&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-    &lt;p&gt;I started gardening for the first time this spring.&lt;/p&gt;
-    &lt;p&gt;I had tucked away a few rustling paper packets of seeds in a forgotten cupboard. &lt;/p&gt;
-    &lt;p&gt;Their labels read like magic spells - sunflowers, mange tout, kale, radishes - each seed a different size, colour and weight. &lt;/p&gt;
-    [[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the garden 4]]
+    &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="3" name="the sitting room" tags="" position="350,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
+    &lt;h2&gt;The Sitting Room&lt;/h2&gt;
+    &lt;p&gt;I&#39;m 36, and this is my living room now&lt;/p&gt;
+    &lt;p&gt;the most finished room of the house, a comfy orange velvet sofa&lt;/p&gt;
+    &lt;p&gt;the most we&#39;ve ever spent on any object, worth every penny to sink in&lt;/p&gt;
+    &lt;p&gt;to the soft feather top&lt;/p&gt;
+    &lt;p&gt;to curl up&lt;/p&gt;
+    &lt;p&gt;it&#39;s the heart of the house, the berth that holds me&lt;/p&gt;
+    &lt;p&gt;to watch the TV, to read a book, to look at our shelves&lt;/p&gt;
+    &lt;p&gt;where books and art and photos wink back at me&lt;/p&gt;
+    &lt;p&gt;a landscape we&#39;ve cultivated to tell our story&lt;/p&gt;
 &lt;/div&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;blob_left.png&quot; style=&quot;width: 100px; position: absolute; left: 0; top: 10px;&quot;&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;blob_right.png&quot; style=&quot;width: 100px; position: absolute; z-index: -1; bottom: 200px;&quot;&gt;
-    &lt;img alt=&quot;a grainy close up of a mange tout growing with a delicate white flower half covering it&quot; src=&quot;beans_cutout.png&quot; alt=&quot;&quot; class=&quot;image-right &quot;&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="10" name="the garden 4" tags="" position="1225,100" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the garden 5&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;I did not think that such small things, so dry and still, could produce anything.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the garden 5]]
-&lt;!-- &lt;p&gt;Surely I would need some special equipment or formula to coax a plant out of them.&lt;/p&gt; --&gt;
+&lt;%= window.story.render(&quot;chapters_downstairs&quot;) %&gt;</tw-passagedata><tw-passagedata pid="4" name="the kitchen" tags="" position="475,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
+    &lt;h2&gt;The Kitchen&lt;/h2&gt;
+    &lt;p&gt;I&#39;m 24 and I live in a house share with 6 other people (though the landlord thinks there&#39;s 4 of us)&lt;/p&gt;
+    &lt;p&gt;It&#39;s a big Victorian family home&lt;/p&gt;
+    &lt;p&gt;The kitchen is in the half-basement floor, big enough for a dining table&lt;/p&gt;
+    &lt;p&gt;We&#39;d stay up and talk for hours here&lt;/p&gt;
+    &lt;p&gt;Weaving the story of our lives until the dawn broke&lt;/p&gt;
+    &lt;p&gt;There were rats living underneath the floorboards&lt;/p&gt;
+    &lt;p&gt;And black mould on the walls&lt;/p&gt;
+    &lt;p&gt;We&#39;d laugh, knowing it was just a waystation&lt;/p&gt;
+    &lt;p&gt;that we&#39;d leave behind, or that we&#39;d be kicked out of&lt;/p&gt;
+    &lt;p&gt;We didn&#39;t own it so it couldn&#39;t hold us back&lt;/p&gt;
 &lt;/div&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="11" name="the garden 5" tags="" position="100,225" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the garden 6&quot;&gt;
-&lt;img alt=&quot;&quot; src=&quot;beans_wall.webp&quot; class=&quot;image-left&quot; style=&quot;transform: rotate(0deg);&quot; /&gt;
-&lt;img alt=&quot;&quot; src=&quot;beans_wall.webp&quot; class=&quot;image-right&quot; style=&quot;transform: rotate(0deg);&quot; /&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;I put them in soil and I watered them and left them in a sunny spot.&lt;/p&gt;
-&lt;p&gt;In less than a week there was something happening.&lt;/p&gt; 
-&lt;p&gt;One day bare earth, the next day a green shoot.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the garden 6]]
-&lt;/div&gt;
-&lt;a&gt;</tw-passagedata><tw-passagedata pid="12" name="the garden 6" tags="" position="225,225" size="100,100">&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;Life was bursting out under the soil and over it.&lt;/p&gt;
-&lt;p&gt;Every day a new leaf or more growth, bending towards the sun.&lt;/p&gt;
-&lt;/div&gt;
-&lt;img alt=&quot;&quot; src=&quot;beans_left_cutout.webp&quot; class=&quot;image-left&quot; style=&quot;transform: rotate(0deg);&quot; /&gt;
-&lt;img alt=&quot;&quot; src=&quot;beans_right_cutout.webp&quot; class=&quot;image-right&quot; style=&quot;transform: rotate(0deg);&quot; /&gt;
-&lt;% s.garden = &quot;true&quot; %&gt;
-    &lt;%= window.story.render(&quot;chapters&quot;) %&gt;</tw-passagedata><tw-passagedata pid="13" name="backButton" tags="" position="350,225" size="100,100">&lt;a href=&quot;javascript: window.history.back();&quot;&gt;&lt;-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="14" name="carousel" tags="" position="475,225" size="100,100">&lt;div class=&quot;carousel-container&quot;&gt;&lt;h1 class=&quot;carousel&quot;&gt;WORK IN PROGRESS&lt;/h1&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="chapters" tags="" position="600,225" size="100,100">&lt;% if(s.garden == &quot;false&quot;){ %&gt;
-&lt;div class=&quot;row-box&quot;&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[the garden-&gt;the garden 3]]&lt;/div&gt;
-&lt;/div&gt;
-&lt;% } %&gt;
-&lt;div class=&quot;row-box&quot;&gt;
-&lt;% if(s.nasturtiums == &quot;false&quot;){ %&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[the nasturtiums]]&lt;/div&gt;
-&lt;% } %&gt;
-&lt;% if(s.rose == &quot;false&quot;){ %&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[the rose bush]]&lt;/div&gt; 
-&lt;% } %&gt;
-&lt;% if(s.weeds == &quot;false&quot;){ %&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[the weeds]]&lt;/div&gt;
-&lt;% } %&gt;
+&lt;img alt=&quot;&quot; src=&quot;ommaney_chairs.webp&quot; class=&quot;image-left&quot; style=&quot;transform: rotate(0deg);&quot; /&gt;
+&lt;img alt=&quot;&quot; src=&quot;ommaney_chairs.webp&quot; class=&quot;image-right&quot; /&gt;
+&lt;%= window.story.render(&quot;chapters_downstairs&quot;) %&gt;</tw-passagedata><tw-passagedata pid="5" name="chapters_upstairs" tags="" position="600,100" size="100,100">&lt;div class=&quot;row-box&quot;&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[the bathroom]]&lt;/div&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[the first bedroom]]&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row-box&quot;&gt;
-&lt;% if(s.end == &quot;false&quot;){ %&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[the end]]&lt;/div&gt;
-&lt;% } %&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="the nasturtiums" tags="" position="592,235" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the nasturtiums 2&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;The nasturtiums and their grasping, insistent, joyful reaching out for light and space. 
-Generating leaf after leaf, tiny star-like pops of green that unfurled like parasols 
-around their beautiful flowers.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the nasturtiums 2]]
+    &lt;div class=&quot;chapter-box&quot;&gt;[[the second bedroom]]&lt;/div&gt; 
+    &lt;div class=&quot;chapter-box&quot;&gt;[[leave]]&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="the landing" tags="" position="725,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
+    &lt;p&gt;let&#39;s walk up the stairs together&lt;/p&gt;
+    &lt;p&gt;past the banisters, dusty wooden bars&lt;/p&gt;
+    &lt;p&gt;when I was 10 we moved somewhere for the first time that had banisters&lt;/p&gt;
+    &lt;p&gt;I used to sit on my own on the stairs and hold them&lt;/p&gt;
+    &lt;p&gt;It felt safe, to be confined. to play at being a prisoner&lt;/p&gt;
+    &lt;p&gt;On my own in an in-between space&lt;/p&gt;
 &lt;/div&gt;
-    &lt;img alt=&quot;a joyful spread of nasturtiums in the sun&quot; src=&quot;nasturtiums_bush.png&quot; class=&quot;image-bottom&quot; /&gt;
-    &lt;!-- &lt;img alt=&quot;&quot; src=&quot;nasturtiums_bee_cutout.webp&quot; class=&quot;image-right&quot; /&gt; --&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="17" name="the nasturtiums 2" tags="" position="850,225" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the nasturtiums 3&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;The red-orange is almost incandescent, unlike any red, 
-unlike any orange, with a powdery depth to it that nothing
- else I saw in my life had.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the nasturtiums 3]]
+&lt;!-- &lt;img src=&quot;rose_cutout_big.webp&quot; class=&quot;image-top &quot;&gt; --&gt;
+&lt;img src=&quot;stamford_hill.webp&quot; class=&quot;cover&quot;&gt;
+    &lt;%= window.story.render(&quot;chapters_upstairs&quot;) %&gt;</tw-passagedata><tw-passagedata pid="7" name="the bathroom" tags="" position="850,100" size="100,100">&lt;h2&gt;The Bathroom&lt;/h2&gt;
+&lt;div class=&quot;block&quot;&gt;
+    &lt;p&gt;Ah yes the weed grew through the wall&lt;/p&gt;
 &lt;/div&gt;
-    &lt;img alt=&quot;close ups of red grainy flowers rotating&quot; src=&quot;nasturtiums_flower_cutout_2.webp&quot; class=&quot;image-hover&quot;&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;nasturtiums_flower_cutout_1.webp&quot; class=&quot;image-hover image-right&quot;&gt;
-    &lt;!-- &lt;img src=&quot;nasturtiums_flower_cutout_2.webp&quot; class=&quot;image-fade image-hover image-right&quot;&gt; --&gt;
-    &lt;!-- &lt;img alt=&quot;&quot; src=&quot;nasturtiums_border.webp&quot; class=&quot;image-right &quot; style=&quot;
-    top: 1vh;
-    right: -7vw;
-    height: 70%;
-    transform: none;
-    &quot;/&gt; --&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;nasturtiums_2.png&quot; class=&quot;image-left&quot;/&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="18" name="the nasturtiums 3" tags="" position="975,225" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the nasturtiums 4&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;The bees assidiously visit one bloom after another, rooting deep into the yellow trumpet of the flower, 
-their little legs sticking out with their soft jodphurs of blossom. &lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the nasturtiums 4]]
+&lt;%= window.story.render(&quot;chapters_upstairs&quot;) %&gt;</tw-passagedata><tw-passagedata pid="8" name="the first bedroom" tags="" position="975,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
+    &lt;p&gt;My first every bedroom&lt;/p&gt;
 &lt;/div&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;nasturtiums_border.webp&quot; class=&quot;image-right&quot;&gt;
-    &lt;img alt=&quot;a bumble bee landing on a red flower&quot; src=&quot;nasturtiums_bee_cutout.webp&quot; class=&quot;image-left&quot; /&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="19" name="the nasturtiums 4" tags="" position="1100,225" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the nasturtiums 5&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;I feel that to be in the garden is to be embedded in the real, the present moment, the ever-changing now. Not a story of the real, or a transmuted vision of reality. I can feel and hear and touch and smell. &lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the nasturtiums 5]]
+&lt;%= window.story.render(&quot;chapters_upstairs&quot;) %&gt;</tw-passagedata><tw-passagedata pid="9" name="the second bedroom" tags="" position="1100,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
+    &lt;p&gt;the second bedroom&lt;/p&gt;
 &lt;/div&gt;
-    &lt;img alt=&quot;&quot; src=&quot;nasturtiums_yellow_full.webp&quot;  /&gt;
-    &lt;img alt=&quot;&quot; src=&quot;nasturtiums_yellow_cutout.webp&quot; class=&quot;image-left &quot; /&gt;
-    &lt;img alt=&quot;&quot; src=&quot;nasturtiums_yellow_cutout.webp&quot; class=&quot;image-right &quot; /&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="20" name="the nasturtiums 5" tags="" position="1225,225" size="100,100">&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;The plants knew nothing, 
-but they knew enough to turn towards the light, to spread out, 
-sometimes curling around another stem as tight as a noose, 
-to fling themselves up, and up and up.&lt;/p&gt;
-&lt;% s.nasturtiums = &quot;true&quot; %&gt;
+&lt;%= window.story.render(&quot;chapters_upstairs&quot;) %&gt;</tw-passagedata><tw-passagedata pid="10" name="leave" tags="" position="1225,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
+    &lt;p&gt;Thanks for visiting&lt;/p&gt;
+    &lt;p&gt;Stop by again some time&lt;/p&gt;
 &lt;/div&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;nasturtiums_leaf_1.webp&quot; class=&quot;image-bottom image-fade image-hover&quot; style=&quot;width: 50vh; z-index: 0;&quot;&gt;
-&lt;%= window.story.render(&quot;chapters&quot;) %&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;nasturtiums_leaf_2.webp&quot; class=&quot;image-fade image-left&quot;&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;nasturtiums_border.webp&quot; class=&quot;image-left &quot;&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;nasturtiums_variegated.webp&quot; class=&quot;image-right &quot; /&gt;</tw-passagedata><tw-passagedata pid="21" name="the rose bush" tags="" position="772,186" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the rose bush 2&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;The scraggly wild rose bush grew fast and ragged throughout the year, though we seem to always be cutting it back.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the rose bush 2]]
-&lt;/div&gt;
-&lt;img alt=&quot;a pink rose that has one petal turned over&quot; src=&quot;rose_cutout_big.webp&quot; class=&quot;image-top &quot;&gt;
-&lt;img aria-hidden=&quot;true&quot; src=&quot;rose_border.webp&quot; class=&quot;image-bottom &quot;&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="22" name="the rose bush 2" tags="" position="225,350" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the rose bush 3&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;It became a host to many visitors over the spring and summer.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the rose bush 3]]
-&lt;/div&gt;
-&lt;img aria-hidden=&quot;true&quot; src=&quot;blob_center.png&quot; style=&quot;width: 100px; position: absolute; left: 0; top: 100px; z-index: -1;&quot;&gt;
-&lt;img aria-hidden=&quot;true&quot; src=&quot;blob_right.png&quot; style=&quot;width: 100px; position: absolute; z-index: -1; bottom: 200px;&quot;&gt;
-&lt;img aria-hidden=&quot;true&quot; src=&quot;rose_caterpillar.webp&quot; class=&quot;image-right &quot;&gt;
-&lt;img alt=&quot;a fluffy caterpillar eats a leaf on a rose bush&quot; src=&quot;rose_caterpillar_cutout.webp&quot; class=&quot;image-left &quot; style=&quot;width: 50%;&quot;&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="23" name="the rose bush 3" tags="" position="350,350" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the rose bush 4&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;The green fly, the hover flies, the tiny caterpillars, 
-all taking their turn at making a home on the dark green leaves.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the rose bush 4]]
-&lt;/div&gt;
-&lt;img alt=&quot;a scraggly rose bush borders the page&quot; src=&quot;rose_border_2.webp&quot; class=&quot;image-right &quot; style=&quot;width: 80%; transform: rotate(0deg);&quot;&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="24" name="the rose bush 4" tags="" position="475,350" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the rose bush 5&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;A family of sparrows came to eat the insects, 
-fluttering in and out.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the rose bush 5]]
-&lt;/div&gt;
-&lt;img alt=&quot;a group of cheerful little pink roses&quot; src=&quot;rose_cutout_small.webp&quot; &gt;
-&lt;img src=&quot;rose_border_2.webp&quot; class=&quot;image-right &quot; style=&quot;transform: rotate(0deg);&quot;&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="25" name="the rose bush 5" tags="" position="600,350" size="100,100">&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;Occassionally within the center of a frowsty pink flower 
-there would sit a jewel-like rose chafer beetle, 
-like a visitor from another world.&lt;/p&gt;
-&lt;/div&gt;
-&lt;img alt=&quot;a golden green rose chafer beetle sits inside a pink rose&quot; src=&quot;rose_cutout.png&quot; class=&quot;image-right &quot;&gt;
-&lt;img aria-hidden=&quot;true&quot; src=&quot;rose_beetle_2.png&quot; class=&quot;image-left &quot; style=&quot;transform: rotate(0deg);&quot;&gt;
-&lt;% s.rose = &quot;true&quot; %&gt;
-&lt;%= window.story.render(&quot;chapters&quot;) %&gt;</tw-passagedata><tw-passagedata pid="26" name="the weeds" tags="" position="718,529" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the weeds 2&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;weeds_poppy_cutout.webp&quot; class=&quot;image-right &quot; style=&quot;z-index: 0;&quot;&gt;
-&lt;p&gt;What&#39;s more delightful than a green shoot coming through the cracks of a paving stone?&lt;/p&gt;
-&lt;p&gt;While our attention was elsewhere, &lt;/br&gt;
-on the seedlings and the plants we intended to grow,&lt;/br&gt;
-there were surprises biding their time around the edges of old paving stones.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the weeds 2]]
-&lt;/div&gt;
-    &lt;img alt=&quot;a curly-leafed big pink poppy and a group of daisies and weeds are collaged in the background&quot; src=&quot;weeds_daisy_floor.webp&quot; class=&quot;image-bottom &quot; style=&quot;width:100vw&quot; /&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="27" name="the weeds 2" tags="" position="718,529" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the weeds 3&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;div&gt;
-&lt;p&gt;We noticed a small blue lobelia here, a stem of pretty grass there, &lt;/br&gt;
-a cluster of daisies, a rococo poppy. &lt;/p&gt;
-&lt;/div&gt;
-&lt;div&gt;
-&lt;/div&gt;
-&lt;img aria-hidden=&quot;true&quot; src=&quot;weeds_poppy_cutout.webp&quot; class=&quot;image-left image-fade&quot; style=&quot;z-index: -1;&quot;&gt;
-&lt;img alt=&quot;a cutout close up of a daisy and a lobelia spin in the center of the screen&quot; src=&quot;weeds_daisy_lobelia_cutout.webp&quot; class=&quot;image-bottom image-fade image-hover&quot; style=&quot;&quot; /&gt;
-&lt;/div&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the weeds 3]]
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="28" name="the weeds 3" tags="" position="718,529" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the weeds 4&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;I enjoy crouching and looking at the detail, the intricacy of these tiny plant outposts. &lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the weeds 4]]
-&lt;/div&gt;
-    &lt;img alt=&quot;a full portrait photo of weeds in sprawling bloom in strong sunlight&quot; src=&quot;weeds_daisies_full.png&quot; class=&quot;image-full &quot; /&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="29" name="the weeds 4" tags="" position="718,529" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the weeds 5&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;Neighbors of herb robert, lobelia, white hawkweed and groundswell jostle each other as they spring out towards open air.&lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the weeds 5]]
-&lt;/div&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;weeds_toadflax_cutout.webp&quot; class=&quot;image-fade image-left&quot; /&gt;
-    &lt;img alt=&quot;a clost up of flowers in a circle&quot; src=&quot;weeds_circle.webp&quot; class=&quot;image-fade image-right&quot; /&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="30" name="the weeds 5" tags="" position="718,529" size="100,100">&lt;a class=&quot;passage-link&quot; data-passage=&quot;the weeds 6&quot;&gt;
-&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;The violet lobelias spread out as the season goes on, a crowd of them blooming large in a corner.&lt;/p&gt;
-&lt;p&gt;The white collars on their dresses hang delicately in the breeze. &lt;/p&gt;
-[[&lt;span aria-label=&quot;next page&quot; class=&quot;button__next&quot;&gt;...&lt;/span&gt;-&gt;the weeds 6]]
-&lt;/div&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;weeds_lobelia_cutout.webp&quot;  style=&quot;position: absolute; z-index: -1; transform: rotate(180deg);&quot; /&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;weeds_lobelia_cutout.webp&quot;  style=&quot;position: absolute; z-index: -1; left: -20vw;&quot; /&gt;
-    &lt;img alt=&quot;a trio of lobelia flowers in extreme close up line the background&quot; src=&quot;weeds_lobelia_cutout.webp&quot;  style=&quot;position: absolute; z-index: -1; rotate(-180deg); right: -20vw;&quot; /&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="31" name="the weeds 6" tags="" position="718,529" size="100,100">&lt;div id=&quot;passage-fade&quot;&gt;
-&lt;p&gt;I love the sheer chance of the weeds. A stray seed blown on the wind or caught on a foot, finding just the right hold on life to grow.&lt;/p&gt;
-&lt;!-- &lt;p&gt;What I saw as barren stone, a small flattened out square of space, a literal blank slate, even this had a history beneath it.&lt;/p&gt; --&gt;
-&lt;p&gt;Someone else has sown a seed here, there have been other seasons and other stories, and I am a small visitor alongside the daisy, the bee and the ant.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;weeds_flower_cutout.webp&quot; class=&quot;image-bottom-right &quot; /&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;weeds_pink_cutout.webp&quot; class=&quot;image-top image-hover&quot; /&gt;
-    &lt;img aria-hidden=&quot;true&quot; src=&quot;weeds_pink_cutout.webp&quot; class=&quot;image-left image-hover&quot; /&gt;
-    &lt;img alt=&quot;a huge pink flower spins in the background&quot;  src=&quot;weeds_toadflax_cutout.webp&quot; class=&quot;image-bottom &quot; /&gt;
-&lt;% s.weeds = &quot;true&quot; %&gt;
-&lt;%= window.story.render(&quot;chapters&quot;) %&gt;</tw-passagedata></tw-storydata>
+&lt;img src=&quot;stamford_hill.webp&quot; class=&quot;cover&quot;&gt;
+&lt;div class=&quot;row-box&quot;&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[visit again-&gt;Home]]&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata></tw-storydata>
 		<script>
 		(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";window.either=function(){for(var n=[],t=0;t<arguments.length;t++)if(arguments[t]instanceof Array)for(var r=0;r<arguments[t].length;r++)n.push(arguments[t][r]);else n.push(arguments[t]);return n[_.random(n.length-1)]},window.hasVisited=function(){var n=null;if(1==arguments.length)return null!=(n=window.story.passage(arguments[0]))&&window.story.history.includes(n.id);for(var t=0;t<arguments.length;t++)if(null==(n=window.story.passage(arguments[t]))||0==window.story.history.includes(n.id))return!1;return!0},window.visited=function(){for(var n=[],t=[],r=0;r<arguments.length;r++){var e=window.story.passage(arguments[r]);null!=e&&(t=window.story.history.filter(function(n){return n==e.id})),n.push(t.length)}return Math.min.apply(Math,n)},window.renderToSelector=function(n,t){var r=window.story.passage(t);null!=r&&$(n).html(r.render())},window.getStyles=function(){return $.when.apply($,$.map(arguments,function(n){return $.get(n,function(n){$("<style>"+n+"</style>").appendTo("head")})}))};

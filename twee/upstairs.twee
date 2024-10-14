@@ -1,0 +1,51 @@
+:: chapters_upstairs
+<div class="row-box">
+    <div class="chapter-box">[[the bathroom]]</div>
+    <div class="chapter-box">[[the first bedroom]]</div>
+</div>
+<div class="row-box">
+    <div class="chapter-box">[[the second bedroom]]</div> 
+    <div class="chapter-box">[[leave]]</div>
+</div>
+
+:: the landing
+<div class="block">
+    <p>let's walk up the stairs together</p>
+    <p>past the banisters, dusty wooden bars</p>
+    <p>when I was 10 we moved somewhere for the first time that had banisters</p>
+    <p>I used to sit on my own on the stairs and hold them</p>
+    <p>It felt safe, to be confined. to play at being a prisoner</p>
+    <p>On my own in an in-between space</p>
+</div>
+<!-- <img src="rose_cutout_big.webp" class="image-top "> -->
+<img src="stamford_hill.webp" class="cover">
+    <%= window.story.render("chapters_upstairs") %>
+
+:: the bathroom
+<h2>The Bathroom</h2>
+<div class="block">
+    <p>Ah yes the weed grew through the wall</p>
+</div>
+<%= window.story.render("chapters_upstairs") %>
+
+:: the first bedroom
+<div class="block">
+    <p>My first every bedroom</p>
+</div>
+<%= window.story.render("chapters_upstairs") %>
+
+:: the second bedroom
+<div class="block">
+    <p>the second bedroom</p>
+</div>
+<%= window.story.render("chapters_upstairs") %>
+
+:: leave
+<div class="block">
+    <p>Thanks for visiting</p>
+    <p>Stop by again some time</p>
+</div>
+<img src="stamford_hill.webp" class="cover">
+<div class="row-box">
+    <div class="chapter-box">[[visit again->Home]]</div>
+</div>

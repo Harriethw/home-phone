@@ -23,12 +23,13 @@ a:active {
 
 body {
     font: 18px;
-    font-family: Courier New, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     color: #222;
     background: white;
-    background-image: radial-gradient(#D3D3D3 2px, transparent 0);
-    background-size: 60px 60px;
+    background-size: 40px 40px;
     background-position: -19px -19px;
+    background-image: linear-gradient(to right, #F5F5F5 1px, transparent 1px),
+        linear-gradient(to bottom, #F5F5F5 1px, transparent 1px);
 }
 
 .button__next {
@@ -70,18 +71,20 @@ body {
     width: 140px;
     height: 140px;
     background: white;
-  
-    border-radius: 50%;
     border-color: black;
     border-style: solid;
     border-width: 1px;
     padding: 0.8em;
     text-align: center;
+    margin: 1em;
 }
 
 .chapter-box:hover {
-    color: black;
-    background: orange;
+    background: blue;
+}
+
+.chapter-box:hover a {
+    color: white;
 }
 
 .cover {
@@ -90,7 +93,7 @@ body {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background: url("./sunflower_branches.png");
+    background: url("./norman_cottage.webp");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -2;
@@ -194,21 +197,25 @@ img {
     line-height: 145%;
 }
 
-p {
-    border-radius: 2em;
+.block {
+    /* border-radius: 2em; */
     border-color: black;
     border-style: solid;
     border-width: 1px;
     padding: 0.8em;
     background: white;
     z-index: 2;
+    p {
+        font-size: medium;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
 }
 
 .passage {
-    border-radius: 2em;
     border-color: black;
     padding: 0.8em;
-    padding-top: 4em;
+    padding-top: 1em;
     /* background: transparent; */
     /* transition: background 1s linear; */
 }
