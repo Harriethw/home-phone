@@ -126,6 +126,7 @@ footer {
 
 footer p {
     border-style: dashed;
+    padding-left: 0.5em;
 }
 
 footer a {
@@ -215,7 +216,7 @@ img {
 .passage {
     border-color: black;
     padding: 0.8em;
-    padding-top: 1em;
+    /* padding-top: 1em; */
     /* background: transparent; */
     /* transition: background 1s linear; */
 }
@@ -245,6 +246,9 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    transform: skewY(-6deg);
+    flex: 1;
 }
 
 @keyframes scroll-animation {
@@ -267,6 +271,18 @@ tw-passage {
 
 tw-storydata {
     display: none;
+}
+
+.header_sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header_wrapper {
+    img {
+        width: 400px;
+    }
 }
 
 /* scale font sizes for phones */

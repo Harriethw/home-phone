@@ -20,10 +20,31 @@ Home Phone
     <div class="chapter-box">[[go upstairs->the landing]]</div> 
 </div>
 
+:: Home
+<div class="header_wrapper">
+    <div class="header_sub">
+        <h2>HOME PHONE</h2>
+        <h3 style="color:blue;">CALL NOW: 0117 214 1269</h3>
+    </div>
+    <div class="header_sub">
+        <img src="doll_phone_pink.webp"/>
+        <div class="row-box">
+            <div class="chapter-box">[[start transcript->Beginning]]</div> 
+        </div>
+    </div>
+    <div class="header_sub">
+        <h2>HOME PHONE</h2>
+        <h3 style="color:blue;">CALL NOW: 0117 214 1269</h3>
+    </div>
+</div>
+<footer>
+    <p>made by <a src="https://mas.to/@harriethw">HarrietHW</a></p>
+    <p>this phone is hosted from a living room in Bristol, UK. It is a DIY <a src="https://areyoubeingserved.constantvzw.org/Summit_afterlife.xhtml">feminist server</a>.
+    <p>it is built with <a src="http://www.motoslave.net/tweego/">Tweego</a></p>
+</footer>
 
-:: Home {"position":"567,386","size":"100,100"}
+:: Beginning {"position":"567,386","size":"100,100"}
     <div aria-hidden="true" class="cover"></div>
-    <h2>Welcome to my home!</h2>
     <div class="block">
         <p>come in, please come in, it's so nice to have a visitor.</p>
         <p>i'll shut the door behind you, let me hang your coat up</p>
@@ -33,9 +54,9 @@ Home Phone
         <p>so, where shall we start?</p>
     </div>
 <%= window.story.render("chapters_downstairs") %>
-    <img aria-hidden="true" class="blob left" src="blob_left.png"/>
-    <img aria-hidden="true" src="blob_right.png" class="blob image-right" style="top: 0;"/>
-    <img aria-hidden="true" class="blob" src="blob_center.png"/>
+    <!-- <img aria-hidden="true" class="blob left" src="blob_left.png"/> -->
+    <!-- <img aria-hidden="true" src="blob_right.png" class="blob image-right" style="top: 0;"/> -->
+    <!-- <img aria-hidden="true" class="blob" src="blob_center.png"/> -->
     <footer>
         <p>made by <a src="https://mas.to/@harriethw">HarrietHW</a></p>
         <p>this garden is hosted from a living room in Bristol, UK. It is a DIY <a src="https://areyoubeingserved.constantvzw.org/Summit_afterlife.xhtml">feminist server</a>.

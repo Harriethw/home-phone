@@ -17,7 +17,6 @@
     <p>It felt safe, to be confined. to play at being a prisoner</p>
     <p>On my own in an in-between space</p>
 </div>
-<!-- <img src="rose_cutout_big.webp" class="image-top "> -->
 <img src="stamford_hill.webp" class="cover">
     <%= window.story.render("chapters_upstairs") %>
 
@@ -26,6 +25,7 @@
 <div class="block">
     <p>Ah yes the weed grew through the wall</p>
 </div>
+<img src="shower_head.webp" class="image-right ">
 <%= window.story.render("chapters_upstairs") %>
 
 :: the first bedroom
