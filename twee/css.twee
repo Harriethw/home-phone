@@ -79,6 +79,13 @@ body {
     margin: 1em;
 }
 
+.chapter-box_disabled a {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: grey;
+}
+
 .chapter-box:hover {
     background: blue;
 }
@@ -127,6 +134,7 @@ footer {
 footer p {
     border-style: dashed;
     padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 footer a {

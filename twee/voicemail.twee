@@ -1,0 +1,32 @@
+:: voicemail intro
+<div class="block">
+   <p>Hi - you've reached the Home Phone project</p>
+   <p>you're talking to a small DIY micro server running this phone service</p>
+   <p>we're currently on a table at the Knowle West Media Centre in Bristol</p>
+   <p>you can find more about this ongoing project at www.homephone.computer</p>
+   <p>press 1 to leave a voice note on our message board</p>
+   <p>press 2 to hear some messages left by others</p>
+   <p>press 3 to hear this message again</p>
+
+   <div class="row-box">
+        <div class="chapter-box">[[press 2->voicemail message]]</div> 
+        <div class="chapter-box_disabled">press 1 (TBC)</div> 
+    </div>
+</div>
+<%= window.story.render("footer") %>
+
+:: voicemail message
+<div class="block">
+   <p>Please leave a short note for our community</p>
+   <p>Perhaps you've been inspired by community tech?</p>
+   <p>Perhaps you'd like to describe a sound?</p>
+   <p>Perhaps you have a wish you'd like to put out into the world?</p>
+   <p>Recording will start after the beep</p>
+   <p>Press the hash key when you're finished, or just hang up</p>
+   <p>Thanks for taking part!</p>
+
+      <div class="row-box">
+        <div class="chapter-box">[[return->Home]]</div> 
+    </div>
+</div>
+<%= window.story.render("footer") %>
