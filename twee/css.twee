@@ -68,15 +68,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
     background: white;
-    border-color: black;
+    border-color: blue;
     border-style: solid;
-    border-width: 1px;
-    padding: 0.8em;
+    border-width: 3px;
+    padding: 0.5em;
     text-align: center;
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .chapter-box_disabled a {
@@ -100,7 +100,6 @@ body {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background: url("./norman_cottage.webp");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -2;
@@ -136,6 +135,7 @@ footer p {
     border-width: 0.1em;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    background: white;
 }
 
 footer a {
@@ -208,17 +208,22 @@ img {
 }
 
 .block {
+    display: flex;
+    flex-direction: row;
+}
+
+.text-container {
     /* border-radius: 2em; */
     border-color: black;
     border-style: solid;
-    border-width: 1px;
+    border-width: 3px;
     padding: 0.8em;
     background: white;
     z-index: 2;
     p {
         font-size: medium;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
     }
 }
 

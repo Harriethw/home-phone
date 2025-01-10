@@ -1,0 +1,16 @@
+:: the sitting room
+    <img src="assets/suburbs.webp" class="cover">
+<div class="block">
+    <div class="text-container">
+        <h2>The Sitting Room</h2>
+        <p>This is my living room now</p>
+        <p>it's the heart of the house, the center that holds us</p>
+        <p>where the books and art and photos and trinkets</p>
+        <p>wink back at me from their home made shelves</p>
+        <p>it's a landscape we've dotted with icons to show the way</p>
+        <p>like we used to cut out our favourite pictures from magazines</p>
+        <p>an orange velvet sofa, a monstera plant, a ceramic pot<p>
+        <p>tell the story of where we want to be and where we want to go</p>
+    </div>
+    <%= window.story.render("chapters_downstairs") %>
+</div>

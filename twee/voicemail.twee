@@ -1,5 +1,5 @@
 :: voicemail intro
-<div class="block">
+<div class="text-container">
    <p>Hi - you've reached the Home Phone project</p>
    <p>you're talking to a small DIY micro server</p>
    <p>we're currently on a table in a living room in Bristol</p>
@@ -16,7 +16,7 @@
 <%= window.story.render("footer") %>
 
 :: voicemail message
-<div class="block">
+<div class="text-container">
    <p>Please leave a short note for our community</p>
    <p>Perhaps you've been inspired by community tech?</p>
    <p>Perhaps you'd like to describe a sound?</p>

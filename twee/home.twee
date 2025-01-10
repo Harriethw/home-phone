@@ -17,7 +17,7 @@ Home Phone
     <p>this phone is hosted from a living room in Bristol, UK. It is a DIY <a src="https://areyoubeingserved.constantvzw.org/Summit_afterlife.xhtml">feminist server</a>.
     <p>made by <a src="https://mas.to/@harriethw">HarrietHW</a></p>
     <p>this site is built with <a src="http://www.motoslave.net/tweego/">Tweego</a></p>
-    <p>tthe phone server is running on <a src="https://www.freepbx.org/">FreePBX</a></p>
+    <p>the phone server is running on <a src="https://www.freepbx.org/">FreePBX</a></p>
 </footer>
 
 :: chapters_downstairs
@@ -30,15 +30,16 @@ Home Phone
 </div>
 
 :: Home
+<img src="assets/wall.webp" class="cover">
 <div class="header_wrapper">
     <div class="header_sub">
         <h2>HOME PHONE</h2>
         <h3 style="color:blue;">CALL NOW: 0117 214 1269</h3>
     </div>
     <div class="header_sub">
-        <img src="doll_phone_pink.webp"/>
+        <img src="assets/doll_phone_pink.webp"/>
         <div class="row-box">
-            <div class="chapter-box">[[start transcript->voicemail intro]]</div> 
+            <div class="chapter-box">[[start transcript->Beginning]]</div> 
         </div>
     </div>
     <div class="header_sub">
@@ -49,51 +50,41 @@ Home Phone
 <%= window.story.render("footer") %>
 
 :: Beginning {"position":"567,386","size":"100,100"}
-    <div aria-hidden="true" class="cover"></div>
+    <img src="assets/norman_cottage_pink.webp" class="cover">
     <div class="block">
-        <p>come in, please come in, it's so nice to have a visitor.</p>
-        <p>i'll shut the door behind you, let me hang your coat up</p>
-        <p>would you like a tour of the house? I'd love to show you around</p>
-        <p>if you could take your shoes off first, thank you</p>
-        <p>don't mind the ghosts if you see any</p>
-        <p>so, where shall we start?</p>
+        <div class="text-container">
+            <p>come in, please come in, it's so nice to have a visitor.</p>
+            <p>i'll shut the door behind you, let me hang your coat up</p>
+            <p>would you like a tour of the house? I'd love to show you around</p>
+            <p>if you could take your shoes off first, thank you</p>
+            <p>don't mind the ghosts if you see any</p>
+            <p>so, where shall we start?</p>
+            <p>there are four rooms and one corridor to show you, which could take about 10 minutes</p>
+        </div>
+        <%= window.story.render("chapters_downstairs") %>
     </div>
-<%= window.story.render("chapters_downstairs") %>
     <!-- <img aria-hidden="true" class="blob left" src="blob_left.png"/> -->
     <!-- <img aria-hidden="true" src="blob_right.png" class="blob image-right" style="top: 0;"/> -->
     <!-- <img aria-hidden="true" class="blob" src="blob_center.png"/> -->
-<%= window.story.render("footer") %>
-
-:: the sitting room
-<div class="block">
-    <h2>The Sitting Room</h2>
-    <p>I'm 36, and this is my living room now</p>
-    <p>the most finished room of the house, a comfy orange velvet sofa</p>
-    <p>the most we've ever spent on any object, worth every penny to sink in</p>
-    <p>to the soft feather top</p>
-    <p>to curl up</p>
-    <p>it's the heart of the house, the berth that holds me</p>
-    <p>to watch the TV, to read a book, to look at our shelves</p>
-    <p>where books and art and photos wink back at me</p>
-    <p>a landscape we've cultivated to tell our story</p>
-</div>
-<%= window.story.render("chapters_downstairs") %>
+    <%= window.story.render("footer") %>
 
 :: the kitchen
 <div class="block">
-    <h2>The Kitchen</h2>
-    <p>I'm 24 and I live in a house share with 6 other people (though the landlord thinks there's 4 of us)</p>
-    <p>It's a big Victorian family home</p>
-    <p>The kitchen is in the half-basement floor, big enough for a dining table</p>
-    <p>We'd stay up and talk for hours here</p>
-    <p>Weaving the story of our lives until the dawn broke</p>
-    <p>There were rats living underneath the floorboards</p>
-    <p>And black mould on the walls</p>
-    <p>We'd laugh, knowing it was just a waystation</p>
-    <p>that we'd leave behind, or that we'd be kicked out of</p>
-    <p>We didn't own it so it couldn't hold us back</p>
+    <div class="text-container">
+        <h2>The Kitchen</h2>
+        <p>I'm 24 and I live in a house share with 6 other people (though the landlord thinks there's 4 of us)</p>
+        <p>It's a big Victorian family home, and we're a kind of family</p>
+        <p>The kitchen is on the half-basement floor, we could watchthe feet of passers by</p>
+        <p>We'd stay up and talk for hours here</p>
+        <p>Weaving the story of our lives until the dawn broke</p>
+        <p>There were rats living underneath the floorboards</p>
+        <p>And black mould on the walls</p>
+        <p>We'd laugh, knowing it was just a waystation</p>
+        <p>that we'd leave behind, or that we'd be kicked out of</p>
+        <p>We didn't own the building and it couldn't hold us back</p>
+    </div>
+    <%= window.story.render("chapters_downstairs") %>
 </div>
-<img alt="" src="ommaney_chairs.webp" class="image-left" style="transform: rotate(0deg);" />
-<img alt="" src="ommaney_chairs.webp" class="image-right" />
-<%= window.story.render("chapters_downstairs") %>
+<img alt="" src="assets/ommaney_chairs.webp" class="image-left" style="transform: rotate(0deg);" />
+<img alt="" src="assets/ommaney_chairs.webp" class="image-right" />
 
