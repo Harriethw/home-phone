@@ -1,12 +1,9 @@
 :: chapters_upstairs
 <div class="row-box">
     <div class="chapter-box">[[the bathroom]]</div>
-    <div class="chapter-box">[[the first bedroom]]</div>
+    <div class="chapter-box">[[the bedroom]]</div>
 </div>
-<div class="row-box">
-    <div class="chapter-box">[[the second bedroom]]</div> 
-    <div class="chapter-box">[[leave]]</div>
-</div>
+<%= window.story.render("chapters_leave") %>
 
 :: the landing
 <div class="block">
@@ -36,7 +33,7 @@
         <p>and strung it up to hide the creeping soft mess of it all<p>
         <p>I disloged a tile that was loose on the wall</p>
         <p>to reveal a curled up root that sprang out of the soft red brick<p>
-        <p>a plant was flourishing green and leafy outside</p>
+        <p>a plant was flourishing outside, green and lush</p>
         <p>clinging dashingly three floors up</p>
         <p>the plant had found a way to live here</p>
         <p>and so would we</p>
@@ -53,7 +50,7 @@
     <%= window.story.render("chapters_upstairs") %>
 </div>
 
-:: the second bedroom
+:: the bedroom
 <div class="block">
     <div class="text-container">
         <p>this is our spare room now</p>
@@ -66,14 +63,4 @@
         <p>looking back at me</p>
     </div>
     <%= window.story.render("chapters_upstairs") %>
-</div>
-
-:: leave
-<div class="text-container">
-    <p>Thanks for visiting</p>
-    <p>Stop by again some time</p>
-</div>
-<img src="assets/stamford_hill_green.webp" class="cover">
-<div class="row-box">
-    <div class="chapter-box">[[visit again->Home]]</div>
 </div>

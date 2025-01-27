@@ -290,6 +290,7 @@ tw-storydata {
 .header_sub {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -302,7 +303,18 @@ tw-storydata {
 /* scale font sizes for phones */
 
 @media screen and (max-device-width: 480px) {
-    #passage {
+    .passage {
         font-size: 70%;
+        flex-direction: column;
+    }
+
+    .block {
+        flex-direction: column;
+    }
+
+    .header_wrapper {
+        img {
+            width: 200px;
+        }
     }
 }

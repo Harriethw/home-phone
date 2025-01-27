@@ -20,6 +20,11 @@ Home Phone
     <p>the phone server is running on <a src="https://www.freepbx.org/">FreePBX</a></p>
 </footer>
 
+:: chapters_leave
+<div class="row-box">
+    <div class="chapter-box">[[leave]]</div>
+</div>
+
 :: chapters_downstairs
 <div class="row-box">
     <div class="chapter-box">[[the sitting room]]</div>
@@ -28,6 +33,8 @@ Home Phone
 <div class="row-box">
     <div class="chapter-box">[[go upstairs->the landing]]</div> 
 </div>
+<%= window.story.render("chapters_leave") %>
+
 
 :: Home
 <img src="assets/wall.webp" class="cover">
@@ -68,23 +75,12 @@ Home Phone
     <!-- <img aria-hidden="true" class="blob" src="blob_center.png"/> -->
     <%= window.story.render("footer") %>
 
-:: the kitchen
-<div class="block">
-    <div class="text-container">
-        <h2>The Kitchen</h2>
-        <p>I'm 24 and I live in a house share with 6 other people (though the landlord thinks there's 4 of us)</p>
-        <p>It's a big Victorian family home, and we're a kind of family</p>
-        <p>The kitchen is on the half-basement floor, we could watchthe feet of passers by</p>
-        <p>We'd stay up and talk for hours here</p>
-        <p>Weaving the story of our lives until the dawn broke</p>
-        <p>There were rats living underneath the floorboards</p>
-        <p>And black mould on the walls</p>
-        <p>We'd laugh, knowing it was just a waystation</p>
-        <p>that we'd leave behind, or that we'd be kicked out of</p>
-        <p>We didn't own the building and it couldn't hold us back</p>
-    </div>
-    <%= window.story.render("chapters_downstairs") %>
+:: leave
+<div class="text-container">
+    <p>Thanks for visiting</p>
+    <p>Stop by again some time</p>
 </div>
-<img alt="" src="assets/ommaney_chairs.webp" class="image-left" style="transform: rotate(0deg);" />
-<img alt="" src="assets/ommaney_chairs.webp" class="image-right" />
-
+<img src="assets/stamford_hill_green.webp" class="cover">
+<div class="row-box">
+    <div class="chapter-box">[[visit again->Home]]</div>
+</div>

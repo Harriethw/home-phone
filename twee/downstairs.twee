@@ -1,3 +1,23 @@
+:: the kitchen
+<div class="block">
+    <div class="text-container">
+        <h2>The Kitchen</h2>
+        <p>I'm 24 and I live in a house with 6 other people</p>
+        <p>don't tell the landlord, he thinks we're 4</p>
+        <p>It's a big Victorian family home, and we're a kind of family</p>
+        <p>We could watch the feet of passersby from the half-basement windows</p>
+        <p>We'd stay up and talk for hours here</p>
+        <p>Weaving the story of our lives together until the dawn broke</p>
+        <p>Young and strong, resting for a while at this waystation</p>
+        <p>The black mould on the walls wouldn't stain us</p>
+        <p>And we'd remember the sounds of the rats underneath the floor</p>
+        <p>And we'd laugh about it all</p>
+    </div>
+    <%= window.story.render("chapters_downstairs") %>
+</div>
+<img alt="" src="assets/ommaney_chairs.webp" class="image-left" style="transform: rotate(0deg);" />
+<img alt="" src="assets/ommaney_chairs.webp" class="image-right" />
+
 :: the sitting room
     <img src="assets/suburbs.webp" class="cover">
 <div class="block">
@@ -9,8 +29,12 @@
         <p>wink back at me from their home made shelves</p>
         <p>it's a landscape we've dotted with icons to show the way</p>
         <p>like we used to cut out our favourite pictures from magazines</p>
-        <p>an orange velvet sofa, a monstera plant, a ceramic pot<p>
-        <p>tell the story of where we want to be and where we want to go</p>
+        <p>like nesting animals shoring up our safety<p>
+        <p>an orange velvet sofa, a monstera plant, a muddy ceramic pot<p>
+        <p>these objects, things, inert and silly</p>
+        <p>allow us to timetravel across our lives<p>
+        <p>and project some sort of future, into the unknown</p>
+        <p>tell a story about who we want to be, and where we want to go</p>
     </div>
     <%= window.story.render("chapters_downstairs") %>
 </div>
