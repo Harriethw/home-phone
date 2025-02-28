@@ -1,11 +1,3 @@
-:: chapters_upstairs
-<div class="row-box">
-    <div class="chapter-box">[[the landing]]</div>
-    <div class="chapter-box">[[the bathroom]]</div>
-    <div class="chapter-box">[[the bedroom]]</div>
-</div>
-<%= window.story.render("chapters_leave") %>
-
 :: the landing
 <div class="block">
     <div class="text-container">

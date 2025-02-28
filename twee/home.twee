@@ -20,22 +20,6 @@ Home Phone
     <p>the phone server is running on <a src="https://www.freepbx.org/">FreePBX</a></p>
 </footer>
 
-:: chapters_leave
-<div class="row-box">
-    <div class="chapter-box">[[leave]]</div>
-</div>
-
-:: chapters_downstairs
-<div class="row-box">
-    <div class="chapter-box">[[the sitting room]]</div>
-    <div class="chapter-box">[[the kitchen]]</div>
-</div>
-<div class="row-box">
-    <div class="chapter-box">[[go upstairs->the landing]]</div> 
-</div>
-<%= window.story.render("chapters_leave") %>
-
-
 :: Home
 <img src="assets/wall.webp" class="cover">
 <div class="header_wrapper">
