@@ -26,15 +26,15 @@
         <p>This is my living room now</p>
         <p>it's the heart of the house, the center that holds us</p>
         <p>where the books and art and photos and trinkets</p>
-        <p>wink back at me from their home made shelves</p>
-        <p>it's a landscape we've dotted with icons to show the way</p>
+        <p>wink back at me from their homemade shelves</p>
+        <p>it's a landscape dotted with wayfinders</p>
         <p>like we used to cut out our favourite pictures from magazines</p>
-        <p>like nesting animals shoring up our safety<p>
+        <p>like nesting animals placing one careful twig after another<p>
         <p>an orange velvet sofa, a monstera plant, a muddy ceramic pot<p>
         <p>these objects, things, inert and silly</p>
         <p>allow us to timetravel across our lives<p>
-        <p>and project some sort of future, into the unknown</p>
         <p>tell a story about who we want to be, and where we want to go</p>
+        <p>and project some sort of safety, as we brace against the unknown future</p>
     </div>
     <%= window.story.render("chapters_downstairs") %>
 </div>

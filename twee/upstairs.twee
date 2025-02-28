@@ -1,5 +1,6 @@
 :: chapters_upstairs
 <div class="row-box">
+    <div class="chapter-box">[[the landing]]</div>
     <div class="chapter-box">[[the bathroom]]</div>
     <div class="chapter-box">[[the bedroom]]</div>
 </div>
@@ -9,14 +10,15 @@
 <div class="block">
     <div class="text-container">
         <p>let's walk up the stairs together</p>
-        <p>past the banisters, dusty wooden bars</p>
-        <p>when I was 10 we moved somewhere for the first time that had banisters</p>
-        <p>I used to sit on my own on the stairs and hold them</p>
-        <p>It felt safe, to be confined in an in-between space. to play at being a prisoner</p>
-        <p>On my own by choice</p>
-        <p>I'd listen to the sounds of my parents on the phone</p>
-        <p>or watching TV, or working</p>
-        <p>and float into different characters and dreams</p>
+        <p>past the banisters, with their dusty wooden bars</p>
+        <p>when I was 10 we moved somewhere for the first time that had stairs like these</p>
+        <p>I used to sit on my own and hold the curved wooden slates</p>
+        <p>It felt safe, to be in a makeshift, in-between space</p>
+        <p>To just play at being stuck</p>
+        <p>I'd listen to the sounds of my parents on the phone,</p>
+        <p>watching TV, or working</p>
+        <p>and float away on dreams of other people and other homes</p>
+        <p>constructing stories that took me out of the inbetween</p>
     </div>
     <%= window.story.render("chapters_upstairs") %>
 </div>
@@ -31,9 +33,9 @@
         <p>the paint peeling off, ecosystems of mould in the wood</p>
         <p>when we moved in we bought a cheap plastic shower curtain</p>
         <p>and strung it up to hide the creeping soft mess of it all<p>
-        <p>I disloged a tile that was loose on the wall</p>
+        <p>I once disloged a tile that was loose on the wall</p>
         <p>to reveal a curled up root that sprang out of the soft red brick<p>
-        <p>a plant was flourishing outside, green and lush</p>
+        <p>a plant was flourishing just outside, green and lush</p>
         <p>clinging dashingly three floors up</p>
         <p>the plant had found a way to live here</p>
         <p>and so would we</p>
@@ -53,14 +55,18 @@
 :: the bedroom
 <div class="block">
     <div class="text-container">
-        <p>this is our spare room now</p>
-        <p>it's white with a carpet from that old owners that used to be white and is now turning grey</p>
-        <p>this mirror above the dresser used to be in my parents house</p>
-        <p>in a spare room too</p>
-        <p>there's still a reflection I sometimes see</p>
-        <p>when I look too long at one spot and everything swims in blur around it</p>
-        <p>there's a small child</p>
-        <p>looking back at me</p>
+        <p>this is our bedroom now</p>
+        <p>the walls are whitewashed and clean</p> 
+        <p>the light pours in every morning</p>
+        <p>and hits this mirror</p>
+        <p>that used to hang in my parents house</p>
+        <p>if I look too long at one spot<p>
+        <p>and the edges of things start to swim and blur</p>
+        <p>I can almost catch the reflection</p>
+        <p>of shifting faces, a young child, a teenager</p>
+        <p>standing in my place</p>
+        <p>and then the light changes</p>
+        <p>and it's just me, looking back</p>
     </div>
     <%= window.story.render("chapters_upstairs") %>
 </div>
