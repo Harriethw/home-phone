@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<tw-story tags></tw-story>
-		<!-- UUID://FF3E68C6-F882-49CA-96CE-0BF116E1FFD0// --><tw-storydata name="Home Phone" startnode="6" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="FF3E68C6-F882-49CA-96CE-0BF116E1FFD0" zoom="1" format="Snowman" format-version="2.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">a {
+		<!-- UUID://FF3E68C6-F882-49CA-96CE-0BF116E1FFD0// --><tw-storydata name="Home Phone" startnode="7" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="FF3E68C6-F882-49CA-96CE-0BF116E1FFD0" zoom="1" format="Snowman" format-version="2.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">a {
     width: 100%;
     height: 100%;
     cursor: pointer;
@@ -137,7 +137,7 @@ body {
 
 footer {
     font-size: medium;
-    margin-top: 5em;
+    margin-top: 10em;
 }
 
 footer p {
@@ -201,6 +201,11 @@ footer a {
     top: 0;
 }
 
+.image-small {
+    height: 20%;
+    width: 20%;
+}
+
 img {
     width: 700px;
 }
@@ -220,6 +225,7 @@ img {
 .block {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .text-container {
@@ -273,6 +279,7 @@ img {
     align-items: center;
     transform: skewY(-6deg);
     flex: 1;
+    width: 50%;
 }
 
 @keyframes scroll-animation {
@@ -382,7 +389,25 @@ $("tw-passage").on('click', function(e) {
         $("#passage-fade").addClass("fade-out");
         window.setTimeout( showDestination, 1000 );
         }           
-});</script><tw-passagedata pid="1" name="the kitchen" tags="" position="100,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
+});</script><tw-passagedata pid="1" name="chapters_leave" tags="" position="100,100" size="100,100">&lt;div class=&quot;row-box&quot;&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[leave]]&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="chapters_downstairs" tags="" position="225,100" size="100,100">&lt;div class=&quot;row-box&quot;&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[the sitting room]]&lt;/div&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[the kitchen]]&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row-box&quot;&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[go upstairs-&gt;the landing]]&lt;/div&gt; 
+&lt;/div&gt;
+&lt;%= window.story.render(&quot;chapters_leave&quot;) %&gt;</tw-passagedata><tw-passagedata pid="3" name="chapters_upstairs" tags="" position="350,100" size="100,100">&lt;div class=&quot;row-box&quot;&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[go downstairs-&gt;the sitting room]]&lt;/div&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[the bathroom]]&lt;/div&gt;
+    &lt;div class=&quot;chapter-box&quot;&gt;[[the bedroom]]&lt;/div&gt;
+&lt;/div&gt;
+&lt;%= window.story.render(&quot;chapters_leave&quot;) %&gt;</tw-passagedata><tw-passagedata pid="4" name="the kitchen" tags="" position="475,100" size="100,100">&lt;img alt=&quot;&quot; src=&quot;assets/ommaney_chairs.webp&quot; class=&quot;image-left&quot; style=&quot;transform: rotate(0deg);&quot; /&gt;
+&lt;img alt=&quot;&quot; src=&quot;assets/ommaney_chairs.webp&quot; class=&quot;image-right&quot; /&gt;
+&lt;img src=&quot;assets/phones/razr_1.webp&quot; class=&quot;image-right&quot;&gt;
+&lt;img src=&quot;assets/monstera.webp&quot; class=&quot;image-left&quot;&gt;
+&lt;div class=&quot;block&quot;&gt;
     &lt;div class=&quot;text-container&quot;&gt;
         &lt;h2&gt;The Kitchen&lt;/h2&gt;
         &lt;p&gt;I&#39;m 24 and I live in a house with 6 other people&lt;/p&gt;
@@ -398,8 +423,11 @@ $("tw-passage").on('click', function(e) {
     &lt;/div&gt;
     &lt;%= window.story.render(&quot;chapters_downstairs&quot;) %&gt;
 &lt;/div&gt;
-&lt;img alt=&quot;&quot; src=&quot;assets/ommaney_chairs.webp&quot; class=&quot;image-left&quot; style=&quot;transform: rotate(0deg);&quot; /&gt;
-&lt;img alt=&quot;&quot; src=&quot;assets/ommaney_chairs.webp&quot; class=&quot;image-right&quot; /&gt;</tw-passagedata><tw-passagedata pid="2" name="the sitting room" tags="" position="225,100" size="100,100">&lt;img src=&quot;assets/suburbs.webp&quot; class=&quot;cover&quot;&gt;
+&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="5" name="the sitting room" tags="" position="600,100" size="100,100">&lt;img src=&quot;assets/suburbs.webp&quot; class=&quot;cover&quot;&gt;
+    &lt;img src=&quot;assets/pothos.webp&quot; class=&quot;image-left&quot;&gt;
+    &lt;img src=&quot;assets/pothos.webp&quot; class=&quot;image-right&quot;&gt;
+    &lt;img src=&quot;assets/phones/nokia_2.webp&quot; class=&quot;image-right image-small&quot;&gt;
+    &lt;img src=&quot;assets/phones/nokia_4.webp&quot; class=&quot;image-bottom image-small&quot;&gt;
 &lt;div class=&quot;block&quot;&gt;
     &lt;div class=&quot;text-container&quot;&gt;
         &lt;h2&gt;The Sitting Room&lt;/h2&gt;
@@ -407,39 +435,32 @@ $("tw-passage").on('click', function(e) {
         &lt;p&gt;it&#39;s the heart of the house, the center that holds us&lt;/p&gt;
         &lt;p&gt;where the books and art and photos and trinkets&lt;/p&gt;
         &lt;p&gt;wink back at me from their homemade shelves&lt;/p&gt;
-        &lt;p&gt;it&#39;s a landscape we&#39;ve dotted with icons to show the way&lt;/p&gt;
+        &lt;p&gt;it&#39;s a landscape dotted with wayfinders&lt;/p&gt;
         &lt;p&gt;like we used to cut out our favourite pictures from magazines&lt;/p&gt;
-        &lt;p&gt;like nesting animals shoring up our safety&lt;p&gt;
+        &lt;p&gt;like nesting animals placing one careful twig after another&lt;p&gt;
         &lt;p&gt;an orange velvet sofa, a monstera plant, a muddy ceramic pot&lt;p&gt;
         &lt;p&gt;these objects, things, inert and silly&lt;/p&gt;
         &lt;p&gt;allow us to timetravel across our lives&lt;p&gt;
-        &lt;p&gt;and project some sort of future, into the unknown&lt;/p&gt;
         &lt;p&gt;tell a story about who we want to be, and where we want to go&lt;/p&gt;
+        &lt;p&gt;and project some sort of safety, as we brace against the unknown future&lt;/p&gt;
     &lt;/div&gt;
     &lt;%= window.story.render(&quot;chapters_downstairs&quot;) %&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="footer" tags="" position="350,100" size="100,100">&lt;footer&gt;
+&lt;/div&gt;
+&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="6" name="footer" tags="" position="725,100" size="100,100">&lt;footer&gt;
     &lt;p&gt;we&#39;re currently prototyping ths project! pls get in touch at machinestreams@protonmail.com if you&#39;d like to know more&lt;/a&gt;.
     &lt;p&gt;this phone is hosted from a living room in Bristol, UK. It is a DIY &lt;a src=&quot;https://areyoubeingserved.constantvzw.org/Summit_afterlife.xhtml&quot;&gt;feminist server&lt;/a&gt;.
     &lt;p&gt;made by &lt;a src=&quot;https://mas.to/@harriethw&quot;&gt;HarrietHW&lt;/a&gt;&lt;/p&gt;
     &lt;p&gt;this site is built with &lt;a src=&quot;http://www.motoslave.net/tweego/&quot;&gt;Tweego&lt;/a&gt;&lt;/p&gt;
     &lt;p&gt;the phone server is running on &lt;a src=&quot;https://www.freepbx.org/&quot;&gt;FreePBX&lt;/a&gt;&lt;/p&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="chapters_leave" tags="" position="475,100" size="100,100">&lt;div class=&quot;row-box&quot;&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[leave]]&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="chapters_downstairs" tags="" position="600,100" size="100,100">&lt;div class=&quot;row-box&quot;&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[the sitting room]]&lt;/div&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[the kitchen]]&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;row-box&quot;&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[go upstairs-&gt;the landing]]&lt;/div&gt; 
-&lt;/div&gt;
-&lt;%= window.story.render(&quot;chapters_leave&quot;) %&gt;</tw-passagedata><tw-passagedata pid="6" name="Home" tags="" position="725,100" size="100,100">&lt;img src=&quot;assets/wall.webp&quot; class=&quot;cover&quot;&gt;
+    &lt;img src=&quot;assets/phones/phone_purple.webp&quot; class=&quot;image-small&quot;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="Home" tags="" position="850,100" size="100,100">&lt;img src=&quot;assets/wall.webp&quot; class=&quot;cover&quot;&gt;
 &lt;div class=&quot;header_wrapper&quot;&gt;
     &lt;div class=&quot;header_sub&quot;&gt;
         &lt;h2&gt;HOME PHONE&lt;/h2&gt;
         &lt;h3 style=&quot;color:blue;&quot;&gt;CALL NOW: 0117 214 1269&lt;/h3&gt;
     &lt;/div&gt;
     &lt;div class=&quot;header_sub&quot;&gt;
-        &lt;img src=&quot;assets/doll_phone_pink.webp&quot;/&gt;
+        &lt;img src=&quot;assets/phones/old-fashioned-phone-2.webp&quot;/&gt;
         &lt;div class=&quot;row-box&quot;&gt;
             &lt;div class=&quot;chapter-box&quot;&gt;[[start transcript-&gt;Beginning]]&lt;/div&gt; 
         &lt;/div&gt;
@@ -449,48 +470,50 @@ $("tw-passage").on('click', function(e) {
         &lt;h3 style=&quot;color:blue;&quot;&gt;CALL NOW: 0117 214 1269&lt;/h3&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="7" name="Beginning" tags="" position="567,386" size="100,100">&lt;img src=&quot;assets/norman_cottage_pink.webp&quot; class=&quot;cover&quot;&gt;
+&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="8" name="Beginning" tags="" position="567,386" size="100,100">&lt;img src=&quot;assets/norman_cottage_pink.webp&quot; class=&quot;cover&quot;&gt;
+    &lt;img src=&quot;assets/phones/corded_phone_pink.webp&quot; class=&quot;image-right&quot;&gt;
     &lt;div class=&quot;block&quot;&gt;
         &lt;div class=&quot;text-container&quot;&gt;
-            &lt;p&gt;come in, please come in, it&#39;s so nice to have a visitor.&lt;/p&gt;
-            &lt;p&gt;i&#39;ll shut the door behind you, let me hang your coat up&lt;/p&gt;
-            &lt;p&gt;would you like a tour of the house? I&#39;d love to show you around&lt;/p&gt;
-            &lt;p&gt;if you could take your shoes off first, thank you&lt;/p&gt;
-            &lt;p&gt;don&#39;t mind the ghosts if you see any&lt;/p&gt;
-            &lt;p&gt;so, where shall we start?&lt;/p&gt;
-            &lt;p&gt;there are four rooms and one corridor to show you, which could take about 10 minutes&lt;/p&gt;
+            &lt;p&gt;Hi welcome to my home phone&lt;/p&gt;
+            &lt;p&gt;We&#39;re at the doorway now, when you choose to enter&lt;/p&gt;
+            &lt;p&gt;I&#39;ll guide you through my infrastucture&lt;/p&gt;
+            &lt;p&gt;there may be glitches, and there may be ghosts, but don&#39;t worry too much&lt;/p&gt;
+            &lt;p&gt;we&#39;ve got a connection now&lt;/p&gt;
+            &lt;p&gt;where would you like to start?&lt;/p&gt;
         &lt;/div&gt;
         &lt;%= window.story.render(&quot;chapters_downstairs&quot;) %&gt;
     &lt;/div&gt;
     &lt;!-- &lt;img aria-hidden=&quot;true&quot; class=&quot;blob left&quot; src=&quot;blob_left.png&quot;/&gt; --&gt;
     &lt;!-- &lt;img aria-hidden=&quot;true&quot; src=&quot;blob_right.png&quot; class=&quot;blob image-right&quot; style=&quot;top: 0;&quot;/&gt; --&gt;
     &lt;!-- &lt;img aria-hidden=&quot;true&quot; class=&quot;blob&quot; src=&quot;blob_center.png&quot;/&gt; --&gt;
-    &lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="8" name="leave" tags="" position="975,100" size="100,100">&lt;div class=&quot;text-container&quot;&gt;
+    &lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="9" name="leave" tags="" position="1100,100" size="100,100">&lt;div class=&quot;text-container&quot;&gt;
     &lt;p&gt;Thanks for visiting&lt;/p&gt;
-    &lt;p&gt;Stop by again some time&lt;/p&gt;
+    &lt;p&gt;I hope you stop by again some time&lt;/p&gt;
+    &lt;p&gt;check out www.homephone.computer for more info&lt;/p&gt;
+    &lt;p&gt;Or, press 1 to leave a message in the guest book&lt;/p&gt;
 &lt;/div&gt;
 &lt;img src=&quot;assets/stamford_hill_green.webp&quot; class=&quot;cover&quot;&gt;
 &lt;div class=&quot;row-box&quot;&gt;
     &lt;div class=&quot;chapter-box&quot;&gt;[[visit again-&gt;Home]]&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="chapters_upstairs" tags="" position="1100,100" size="100,100">&lt;div class=&quot;row-box&quot;&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[the bathroom]]&lt;/div&gt;
-    &lt;div class=&quot;chapter-box&quot;&gt;[[the bedroom]]&lt;/div&gt;
-&lt;/div&gt;
-&lt;%= window.story.render(&quot;chapters_leave&quot;) %&gt;</tw-passagedata><tw-passagedata pid="10" name="the landing" tags="" position="1225,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="the landing" tags="" position="1225,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
     &lt;div class=&quot;text-container&quot;&gt;
         &lt;p&gt;let&#39;s walk up the stairs together&lt;/p&gt;
-        &lt;p&gt;past the banisters, dusty wooden bars&lt;/p&gt;
-        &lt;p&gt;when I was 10 we moved somewhere for the first time that had banisters&lt;/p&gt;
-        &lt;p&gt;I used to sit on my own on the stairs and hold them&lt;/p&gt;
-        &lt;p&gt;It felt safe, to be confined in an in-between space. to play at being a prisoner&lt;/p&gt;
-        &lt;p&gt;On my own by choice&lt;/p&gt;
-        &lt;p&gt;I&#39;d listen to the sounds of my parents on the phone&lt;/p&gt;
-        &lt;p&gt;or watching TV, or working&lt;/p&gt;
-        &lt;p&gt;and float into different characters and dreams&lt;/p&gt;
+        &lt;p&gt;past the banisters, with their dusty wooden bars&lt;/p&gt;
+        &lt;p&gt;when I was 10 we moved somewhere for the first time that had stairs like these&lt;/p&gt;
+        &lt;p&gt;I used to sit on my own and hold the curved wooden slates&lt;/p&gt;
+        &lt;p&gt;It felt safe, to be in a makeshift, in-between space&lt;/p&gt;
+        &lt;p&gt;To just play at being stuck&lt;/p&gt;
+        &lt;p&gt;I&#39;d listen to the sounds of my parents on the phone,&lt;/p&gt;
+        &lt;p&gt;watching TV, or working&lt;/p&gt;
+        &lt;p&gt;and float away on dreams of other people and other homes&lt;/p&gt;
+        &lt;p&gt;constructing stories that took me out of the inbetween&lt;/p&gt;
     &lt;/div&gt;
     &lt;%= window.story.render(&quot;chapters_upstairs&quot;) %&gt;
 &lt;/div&gt;
-&lt;img src=&quot;assets/stamford_hill_green.webp&quot; class=&quot;cover&quot;&gt;</tw-passagedata><tw-passagedata pid="11" name="the bathroom" tags="" position="100,225" size="100,100">&lt;h2&gt;The Bathroom&lt;/h2&gt;
+&lt;img src=&quot;assets/stamford_hill_green.webp&quot; class=&quot;cover&quot;&gt;
+&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="11" name="the bathroom" tags="" position="100,225" size="100,100">&lt;h2&gt;The Bathroom&lt;/h2&gt;
+&lt;img src=&quot;assets/shower.webp&quot; class=&quot;image-right &quot;&gt;
+&lt;img src=&quot;assets/phones/ericcson_2.webp&quot; class=&quot;image-left&quot;&gt;
 &lt;div class=&quot;block&quot;&gt;
     &lt;div class=&quot;text-container&quot;&gt;
         &lt;p&gt;&lt;em&gt;Sound of tap running&lt;/em&gt;&lt;/p&gt;
@@ -507,12 +530,7 @@ $("tw-passage").on('click', function(e) {
     &lt;/div&gt;
     &lt;%= window.story.render(&quot;chapters_upstairs&quot;) %&gt;
 &lt;/div&gt;
-&lt;img src=&quot;assets/shower_head.webp&quot; class=&quot;image-right &quot;&gt;</tw-passagedata><tw-passagedata pid="12" name="the first bedroom" tags="" position="225,225" size="100,100">&lt;div class=&quot;block&quot;&gt;
-    &lt;div class=&quot;text-container&quot;&gt;
-        &lt;p&gt;My first ever bedroom&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;%= window.story.render(&quot;chapters_upstairs&quot;) %&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="the bedroom" tags="" position="350,225" size="100,100">&lt;div class=&quot;block&quot;&gt;
+&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="12" name="the bedroom" tags="" position="225,225" size="100,100">&lt;div class=&quot;block&quot;&gt;
     &lt;div class=&quot;text-container&quot;&gt;
         &lt;p&gt;this is our bedroom now&lt;/p&gt;
         &lt;p&gt;the walls are whitewashed and clean&lt;/p&gt; 
@@ -522,11 +540,14 @@ $("tw-passage").on('click', function(e) {
         &lt;p&gt;if I look too long at one spot&lt;p&gt;
         &lt;p&gt;and the edges of things start to swim and blur&lt;/p&gt;
         &lt;p&gt;I can almost catch the reflection&lt;/p&gt;
-        &lt;p&gt;looking out at me&lt;/p&gt;
-        &lt;p&gt;of a small child&lt;/p&gt;
+        &lt;p&gt;of shifting faces, a young child, a teenager&lt;/p&gt;
+        &lt;p&gt;standing in my place&lt;/p&gt;
+        &lt;p&gt;and then the light changes&lt;/p&gt;
+        &lt;p&gt;and it&#39;s just me, looking back&lt;/p&gt;
     &lt;/div&gt;
     &lt;%= window.story.render(&quot;chapters_upstairs&quot;) %&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="voicemail intro" tags="" position="475,225" size="100,100">&lt;div class=&quot;text-container&quot;&gt;
+&lt;/div&gt;
+&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="13" name="voicemail intro" tags="" position="350,225" size="100,100">&lt;div class=&quot;text-container&quot;&gt;
    &lt;p&gt;Hi - you&#39;ve reached the Home Phone project&lt;/p&gt;
    &lt;p&gt;you&#39;re talking to a small DIY micro server&lt;/p&gt;
    &lt;p&gt;we&#39;re currently on a table in a living room in Bristol&lt;/p&gt;
@@ -540,7 +561,7 @@ $("tw-passage").on('click', function(e) {
         &lt;div class=&quot;chapter-box_disabled&quot;&gt;press 1 (TBC)&lt;/div&gt; 
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="15" name="voicemail message" tags="" position="600,225" size="100,100">&lt;div class=&quot;text-container&quot;&gt;
+&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="14" name="voicemail message" tags="" position="475,225" size="100,100">&lt;div class=&quot;text-container&quot;&gt;
    &lt;p&gt;Please leave a short note for our community&lt;/p&gt;
    &lt;p&gt;Perhaps you&#39;ve been inspired by community tech?&lt;/p&gt;
    &lt;p&gt;Perhaps you&#39;d like to describe a sound?&lt;/p&gt;

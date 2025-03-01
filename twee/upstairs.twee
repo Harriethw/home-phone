@@ -15,9 +15,12 @@
     <%= window.story.render("chapters_upstairs") %>
 </div>
 <img src="assets/stamford_hill_green.webp" class="cover">
+<%= window.story.render("footer") %>
 
 :: the bathroom
 <h2>The Bathroom</h2>
+<img src="assets/shower.webp" class="image-right ">
+<img src="assets/phones/ericcson_2.webp" class="image-left">
 <div class="block">
     <div class="text-container">
         <p><em>Sound of tap running</em></p>
@@ -34,15 +37,7 @@
     </div>
     <%= window.story.render("chapters_upstairs") %>
 </div>
-<img src="assets/shower_head.webp" class="image-right ">
-
-:: the first bedroom
-<div class="block">
-    <div class="text-container">
-        <p>My first ever bedroom</p>
-    </div>
-    <%= window.story.render("chapters_upstairs") %>
-</div>
+<%= window.story.render("footer") %>
 
 :: the bedroom
 <div class="block">
@@ -62,3 +57,4 @@
     </div>
     <%= window.story.render("chapters_upstairs") %>
 </div>
+<%= window.story.render("footer") %>

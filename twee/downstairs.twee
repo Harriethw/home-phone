@@ -1,4 +1,8 @@
 :: the kitchen
+<img alt="" src="assets/ommaney_chairs.webp" class="image-left" style="transform: rotate(0deg);" />
+<img alt="" src="assets/ommaney_chairs.webp" class="image-right" />
+<img src="assets/phones/razr_1.webp" class="image-right">
+<img src="assets/monstera.webp" class="image-left">
 <div class="block">
     <div class="text-container">
         <h2>The Kitchen</h2>
@@ -15,11 +19,15 @@
     </div>
     <%= window.story.render("chapters_downstairs") %>
 </div>
-<img alt="" src="assets/ommaney_chairs.webp" class="image-left" style="transform: rotate(0deg);" />
-<img alt="" src="assets/ommaney_chairs.webp" class="image-right" />
+<%= window.story.render("footer") %>
+
 
 :: the sitting room
     <img src="assets/suburbs.webp" class="cover">
+    <img src="assets/pothos.webp" class="image-left">
+    <img src="assets/pothos.webp" class="image-right">
+    <img src="assets/phones/nokia_2.webp" class="image-right image-small">
+    <img src="assets/phones/nokia_4.webp" class="image-bottom image-small">
 <div class="block">
     <div class="text-container">
         <h2>The Sitting Room</h2>
@@ -38,3 +46,4 @@
     </div>
     <%= window.story.render("chapters_downstairs") %>
 </div>
+<%= window.story.render("footer") %>
