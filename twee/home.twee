@@ -18,18 +18,18 @@ Home Phone
     <p>made by <a src="https://mas.to/@harriethw">HarrietHW</a></p>
     <p>this site is built with <a src="http://www.motoslave.net/tweego/">Tweego</a></p>
     <p>the phone server is running on <a src="https://www.freepbx.org/">FreePBX</a></p>
-    <img src="assets/phones/phone_purple.webp" class="image-small">
+    <img alt="nineties purple home phone" src="assets/phones/phone_purple.webp" class="image-small">
 </footer>
 
 :: Home
-<img src="assets/wall.webp" class="cover">
+<img alt="grainy photo of a brick wall" src="assets/wall.webp" class="cover">
 <div class="header_wrapper">
     <div class="header_sub">
         <h2>HOME PHONE</h2>
         <h3 style="color:blue;">CALL NOW: 0117 214 1269</h3>
     </div>
     <div class="header_sub">
-        <img src="assets/phones/old-fashioned-phone-2.webp"/>
+        <img alt="an old fashioned corded phone" src="assets/phones/old-fashioned-phone-2.webp"/>
         <div class="row-box">
             <div class="chapter-box">[[start transcript->Beginning]]</div> 
         </div>
@@ -42,8 +42,8 @@ Home Phone
 <%= window.story.render("footer") %>
 
 :: Beginning {"position":"567,386","size":"100,100"}
-    <img src="assets/norman_cottage_pink.webp" class="cover">
-    <img src="assets/phones/corded_phone_pink.webp" class="image-right">
+    <img alt="grainy image of a large mock-tudor house" src="assets/norman_cottage_pink.webp" class="cover">
+    <img alt="an old fashioned corded phone" src="assets/phones/corded_phone_pink.webp" class="image-right">
     <div class="block">
         <div class="text-container">
             <p>Hi welcome to my home phone</p>

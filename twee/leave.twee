@@ -5,7 +5,7 @@
     <p>check out www.homephone.computer for more info</p>
     <p>Or, press 1 to leave a message in the guest book</p>
 </div>
-<img src="assets/stamford_hill_green.webp" class="cover">
+<img alt="grainy image of brick apartment block in London" src="assets/stamford_hill_green.webp" class="cover">
 <div class="row-box">
     <div class="chapter-box">[[visit again->Home]]</div>
 </div>

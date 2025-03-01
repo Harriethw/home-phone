@@ -14,13 +14,13 @@
     </div>
     <%= window.story.render("chapters_upstairs") %>
 </div>
-<img src="assets/stamford_hill_green.webp" class="cover">
+<img alt="grainy image of brick apartment block in London" src="assets/stamford_hill_green.webp" class="cover">
 <%= window.story.render("footer") %>
 
 :: the bathroom
 <h2>The Bathroom</h2>
-<img src="assets/shower.webp" class="image-right ">
-<img src="assets/phones/ericcson_2.webp" class="image-left">
+<img src="assets/shower.webp" class="image-right" alt="a basic shower head floating on the page">
+<img src="assets/phones/ericcson_2.webp" class="image-left" alt="an ericsson phone">
 <div class="block">
     <div class="text-container">
         <p><em>Sound of tap running</em></p>
