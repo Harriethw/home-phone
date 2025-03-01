@@ -13,6 +13,7 @@ Home Phone
 
 :: footer
 <footer>
+    <p>0117 214 1269</p>
     <p>we're currently prototyping ths project! pls get in touch at machinestreams@protonmail.com if you'd like to know more</a>.
     <p>this phone is hosted from a living room in Bristol, UK. It is a DIY <a src="https://areyoubeingserved.constantvzw.org/Summit_afterlife.xhtml">feminist server</a>.
     <p>made by <a src="https://mas.to/@harriethw">HarrietHW</a></p>
@@ -26,7 +27,9 @@ Home Phone
 <div class="header_wrapper">
     <div class="header_sub">
         <h2>HOME PHONE</h2>
-        <h3 style="color:blue;">CALL NOW: 0117 214 1269</h3>
+        <div class="marquee__wrapper">
+            <h3 style="color:blue;" class="marquee">CALL NOW: 0117 214 1269</h3>
+        </div>
     </div>
     <div class="header_sub">
         <img alt="an old fashioned corded phone" src="assets/phones/old-fashioned-phone-2.webp"/>
@@ -36,7 +39,9 @@ Home Phone
     </div>
     <div class="header_sub">
         <h2>HOME PHONE</h2>
-        <h3 style="color:blue;">CALL NOW: 0117 214 1269</h3>
+        <div class="marquee__wrapper">
+            <h3 style="color:blue;" class="marquee">CALL NOW: 0117 214 1269</h3>
+        </div>
     </div>
 </div>
 <%= window.story.render("footer") %>

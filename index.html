@@ -317,6 +317,52 @@ tw-storydata {
     }
 }
 
+.marquee__wrapper {
+    width: 100vw;
+}
+
+.marquee {
+    background: white;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 2s linear infinite;
+    -webkit-animation: scroll-left 2s linear infinite;
+    animation: scroll-left 20s linear infinite;
+}
+
+           
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
 /* scale font sizes for phones */
 
 @media screen and (max-device-width: 480px) {
@@ -333,6 +379,40 @@ tw-storydata {
         img {
             width: 200px;
         }
+    }
+
+    .marquee {
+       -moz-transform: none;
+       -webkit-transform: none;
+       transform: none;
+       -webkit-transition: none;
+       -moz-transition: none;
+       -o-transition: none;
+       transition: none;
+       animation: none;
+    }
+
+    .marquee__wrapper {
+
+        width: auto;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .marquee {
+       -moz-transform: none;
+       -webkit-transform: none;
+       transform: none;
+       -webkit-transition: none;
+       -moz-transition: none;
+       -o-transition: none;
+       transition: none;
+       animation: none;
+    }
+
+    .marquee__wrapper {
+
+        width: auto;
     }
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">//add passage to browser history
 $(window).on('sm.passage.hidden', function (e, data)
@@ -403,10 +483,10 @@ $("tw-passage").on('click', function(e) {
     &lt;div class=&quot;chapter-box&quot;&gt;[[the bathroom]]&lt;/div&gt;
     &lt;div class=&quot;chapter-box&quot;&gt;[[the bedroom]]&lt;/div&gt;
 &lt;/div&gt;
-&lt;%= window.story.render(&quot;chapters_leave&quot;) %&gt;</tw-passagedata><tw-passagedata pid="4" name="the kitchen" tags="" position="475,100" size="100,100">&lt;img alt=&quot;&quot; src=&quot;assets/ommaney_chairs.webp&quot; class=&quot;image-left&quot; style=&quot;transform: rotate(0deg);&quot; /&gt;
-&lt;img alt=&quot;&quot; src=&quot;assets/ommaney_chairs.webp&quot; class=&quot;image-right&quot; /&gt;
-&lt;img src=&quot;assets/phones/razr_1.webp&quot; class=&quot;image-right&quot;&gt;
-&lt;img src=&quot;assets/monstera.webp&quot; class=&quot;image-left&quot;&gt;
+&lt;%= window.story.render(&quot;chapters_leave&quot;) %&gt;</tw-passagedata><tw-passagedata pid="4" name="the kitchen" tags="" position="475,100" size="100,100">&lt;img alt=&quot;ikea chairs&quot; src=&quot;assets/ommaney_chairs.webp&quot; class=&quot;image-left&quot; style=&quot;transform: rotate(0deg);&quot; /&gt;
+&lt;img alt=&quot;&quot; src=&quot;assets/ommaney_chairs.webp&quot; class=&quot;image-right&quot; aria-hidden=&quot;true&quot;/&gt;
+&lt;img alt=&quot;a motorola razr phone&quot; src=&quot;assets/phones/razr_1.webp&quot; class=&quot;image-right&quot;&gt;
+&lt;img alt=&quot;a monstera plant&quot; src=&quot;assets/monstera.webp&quot; class=&quot;image-left&quot;&gt;
 &lt;div class=&quot;block&quot;&gt;
     &lt;div class=&quot;text-container&quot;&gt;
         &lt;h2&gt;The Kitchen&lt;/h2&gt;
@@ -423,11 +503,11 @@ $("tw-passage").on('click', function(e) {
     &lt;/div&gt;
     &lt;%= window.story.render(&quot;chapters_downstairs&quot;) %&gt;
 &lt;/div&gt;
-&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="5" name="the sitting room" tags="" position="600,100" size="100,100">&lt;img src=&quot;assets/suburbs.webp&quot; class=&quot;cover&quot;&gt;
-    &lt;img src=&quot;assets/pothos.webp&quot; class=&quot;image-left&quot;&gt;
-    &lt;img src=&quot;assets/pothos.webp&quot; class=&quot;image-right&quot;&gt;
-    &lt;img src=&quot;assets/phones/nokia_2.webp&quot; class=&quot;image-right image-small&quot;&gt;
-    &lt;img src=&quot;assets/phones/nokia_4.webp&quot; class=&quot;image-bottom image-small&quot;&gt;
+&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="5" name="the sitting room" tags="" position="600,100" size="100,100">&lt;img alt=&quot;grainy image of suburban homes&quot; src=&quot;assets/suburbs.webp&quot; class=&quot;cover&quot;&gt;
+    &lt;img alt=&quot;pothos plant&quot; src=&quot;assets/pothos.webp&quot; class=&quot;image-left&quot;&gt;
+    &lt;img src=&quot;assets/pothos.webp&quot; class=&quot;image-right&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;img alt=&quot;nokia phone&quot; src=&quot;assets/phones/nokia_2.webp&quot; class=&quot;image-right image-small&quot;&gt;
+    &lt;img src=&quot;assets/phones/nokia_4.webp&quot; class=&quot;image-bottom image-small&quot; aria-hidden=&quot;true&quot;&gt;
 &lt;div class=&quot;block&quot;&gt;
     &lt;div class=&quot;text-container&quot;&gt;
         &lt;h2&gt;The Sitting Room&lt;/h2&gt;
@@ -447,31 +527,36 @@ $("tw-passage").on('click', function(e) {
     &lt;%= window.story.render(&quot;chapters_downstairs&quot;) %&gt;
 &lt;/div&gt;
 &lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="6" name="footer" tags="" position="725,100" size="100,100">&lt;footer&gt;
+    &lt;p&gt;0117 214 1269&lt;/p&gt;
     &lt;p&gt;we&#39;re currently prototyping ths project! pls get in touch at machinestreams@protonmail.com if you&#39;d like to know more&lt;/a&gt;.
     &lt;p&gt;this phone is hosted from a living room in Bristol, UK. It is a DIY &lt;a src=&quot;https://areyoubeingserved.constantvzw.org/Summit_afterlife.xhtml&quot;&gt;feminist server&lt;/a&gt;.
     &lt;p&gt;made by &lt;a src=&quot;https://mas.to/@harriethw&quot;&gt;HarrietHW&lt;/a&gt;&lt;/p&gt;
     &lt;p&gt;this site is built with &lt;a src=&quot;http://www.motoslave.net/tweego/&quot;&gt;Tweego&lt;/a&gt;&lt;/p&gt;
     &lt;p&gt;the phone server is running on &lt;a src=&quot;https://www.freepbx.org/&quot;&gt;FreePBX&lt;/a&gt;&lt;/p&gt;
-    &lt;img src=&quot;assets/phones/phone_purple.webp&quot; class=&quot;image-small&quot;&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="Home" tags="" position="850,100" size="100,100">&lt;img src=&quot;assets/wall.webp&quot; class=&quot;cover&quot;&gt;
+    &lt;img alt=&quot;nineties purple home phone&quot; src=&quot;assets/phones/phone_purple.webp&quot; class=&quot;image-small&quot;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="Home" tags="" position="850,100" size="100,100">&lt;img alt=&quot;grainy photo of a brick wall&quot; src=&quot;assets/wall.webp&quot; class=&quot;cover&quot;&gt;
 &lt;div class=&quot;header_wrapper&quot;&gt;
     &lt;div class=&quot;header_sub&quot;&gt;
         &lt;h2&gt;HOME PHONE&lt;/h2&gt;
-        &lt;h3 style=&quot;color:blue;&quot;&gt;CALL NOW: 0117 214 1269&lt;/h3&gt;
+        &lt;div class=&quot;marquee__wrapper&quot;&gt;
+            &lt;h3 style=&quot;color:blue;&quot; class=&quot;marquee&quot;&gt;CALL NOW: 0117 214 1269&lt;/h3&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;header_sub&quot;&gt;
-        &lt;img src=&quot;assets/phones/old-fashioned-phone-2.webp&quot;/&gt;
+        &lt;img alt=&quot;an old fashioned corded phone&quot; src=&quot;assets/phones/old-fashioned-phone-2.webp&quot;/&gt;
         &lt;div class=&quot;row-box&quot;&gt;
             &lt;div class=&quot;chapter-box&quot;&gt;[[start transcript-&gt;Beginning]]&lt;/div&gt; 
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;header_sub&quot;&gt;
         &lt;h2&gt;HOME PHONE&lt;/h2&gt;
-        &lt;h3 style=&quot;color:blue;&quot;&gt;CALL NOW: 0117 214 1269&lt;/h3&gt;
+        &lt;div class=&quot;marquee__wrapper&quot;&gt;
+            &lt;h3 style=&quot;color:blue;&quot; class=&quot;marquee&quot;&gt;CALL NOW: 0117 214 1269&lt;/h3&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="8" name="Beginning" tags="" position="567,386" size="100,100">&lt;img src=&quot;assets/norman_cottage_pink.webp&quot; class=&quot;cover&quot;&gt;
-    &lt;img src=&quot;assets/phones/corded_phone_pink.webp&quot; class=&quot;image-right&quot;&gt;
+&lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="8" name="Beginning" tags="" position="567,386" size="100,100">&lt;img alt=&quot;grainy image of a large mock-tudor house&quot; src=&quot;assets/norman_cottage_pink.webp&quot; class=&quot;cover&quot;&gt;
+    &lt;img alt=&quot;an old fashioned corded phone&quot; src=&quot;assets/phones/corded_phone_pink.webp&quot; class=&quot;image-right&quot;&gt;
     &lt;div class=&quot;block&quot;&gt;
         &lt;div class=&quot;text-container&quot;&gt;
             &lt;p&gt;Hi welcome to my home phone&lt;/p&gt;
@@ -492,7 +577,7 @@ $("tw-passage").on('click', function(e) {
     &lt;p&gt;check out www.homephone.computer for more info&lt;/p&gt;
     &lt;p&gt;Or, press 1 to leave a message in the guest book&lt;/p&gt;
 &lt;/div&gt;
-&lt;img src=&quot;assets/stamford_hill_green.webp&quot; class=&quot;cover&quot;&gt;
+&lt;img alt=&quot;grainy image of brick apartment block in London&quot; src=&quot;assets/stamford_hill_green.webp&quot; class=&quot;cover&quot;&gt;
 &lt;div class=&quot;row-box&quot;&gt;
     &lt;div class=&quot;chapter-box&quot;&gt;[[visit again-&gt;Home]]&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="the landing" tags="" position="1225,100" size="100,100">&lt;div class=&quot;block&quot;&gt;
@@ -510,10 +595,10 @@ $("tw-passage").on('click', function(e) {
     &lt;/div&gt;
     &lt;%= window.story.render(&quot;chapters_upstairs&quot;) %&gt;
 &lt;/div&gt;
-&lt;img src=&quot;assets/stamford_hill_green.webp&quot; class=&quot;cover&quot;&gt;
+&lt;img alt=&quot;grainy image of brick apartment block in London&quot; src=&quot;assets/stamford_hill_green.webp&quot; class=&quot;cover&quot;&gt;
 &lt;%= window.story.render(&quot;footer&quot;) %&gt;</tw-passagedata><tw-passagedata pid="11" name="the bathroom" tags="" position="100,225" size="100,100">&lt;h2&gt;The Bathroom&lt;/h2&gt;
-&lt;img src=&quot;assets/shower.webp&quot; class=&quot;image-right &quot;&gt;
-&lt;img src=&quot;assets/phones/ericcson_2.webp&quot; class=&quot;image-left&quot;&gt;
+&lt;img src=&quot;assets/shower.webp&quot; class=&quot;image-right&quot; alt=&quot;a basic shower head floating on the page&quot;&gt;
+&lt;img src=&quot;assets/phones/ericcson_2.webp&quot; class=&quot;image-left&quot; alt=&quot;an ericsson phone&quot;&gt;
 &lt;div class=&quot;block&quot;&gt;
     &lt;div class=&quot;text-container&quot;&gt;
         &lt;p&gt;&lt;em&gt;Sound of tap running&lt;/em&gt;&lt;/p&gt;
