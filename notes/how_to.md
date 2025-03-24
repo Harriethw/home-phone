@@ -101,10 +101,24 @@ Once signed in as an admin in the UI:
 1. The Destination option will point the caller to any feature you want (e.g announcement/IVR) you wish. Can be a standard Annoucnement for now if you haven't yet set anything up.
 1. Submit the form and click Apply Config
 
+Once this is done, you should be able to call your telephone number and be directed to whatever Inbound destination you chose. 
 
 ### Customise your FreePBX
 
 #### Adding recordings
+
+##### UI
+Under the 'Admin' tab, the  'System Recordings' feature is where all of your custom recordings will live.
+Before you setup any announcements or other apps, record your audio and load them here. 
+
+* I've found `.wav` files easiest to work with
+* Save time by saving them as MONO,16bits at 8KHz, on your computer before uploading
+
+##### CLI
+
+System recordings are saved at the path `/var/lib/asterisk/sounds/en/custom/` so if you ever need to copy them or move them after adding you can.
+
+If you think you've saved the audio in correct format already, you could copy them from your local computer to that folder via the terminal. But I'm not always confident I've saved the audio correctly so I prefer to go via UI.
 
 #### Setting up voicemail
 
