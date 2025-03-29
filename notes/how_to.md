@@ -24,10 +24,10 @@ And, once you get more advanced
 ### Knowledge
 
 - These instructions should hopefully be beginner-friendly, but if you have a very basic grasp of these it will be a lot easier:
-   - a little bit of an understanding of [command line interfaces](https://www.freecodecamp.org/news/command-line-for-beginners/) 
-   - a basic mental model of what a server is and how they talk to each other
+  - a little bit of an understanding of [command line interfaces](https://www.freecodecamp.org/news/command-line-for-beginners/)
+  - a basic mental model of what a server is and how they computers talk to each other
 
-I am a complete novice so if I can do it you can too!   
+I am a complete novice so if I can do it you can too!
 
 ### Time
 
@@ -51,19 +51,91 @@ I am a complete novice so if I can do it you can too!
 
 ## Build your server
 
-### 
-
 ### Download the OS
 
 https://github.com/Harriethw/freepbx-raspberrypi
 
-^ These are instructions I copied over from a forum after hitting a wall trying to get FreePBX running following [the RasPBX project](http://www.raspbx.org/) and this awesome guide to [setting it up with a 3G Dongle](https://github.com/MatejKovacic/RasPBX-install) 
+^ These are instructions I copied over from a forum after hitting a wall trying to get FreePBX running following [the RasPBX project](http://www.raspbx.org/) and this awesome guide to [setting it up with a 3G Dongle](https://github.com/MatejKovacic/RasPBX-install)
 
 ### Sign into your server
 
+Once you've followed those instructions you should have your `root` and `pi` users setup, and you should be able to login in two ways, using the username and passwords you setup for them.
+
 #### Command Line Interface (CLI)
 
+Via the terminal and an ssh command: `ssh {user}@{pi.ip.address}`
+
 #### Through the UI / Browser
+
+Via the browser by navigating to the pi's IP address
+
+### Good practices
+
+- keep saving and applying config as you go in the UI.
+- if you make changes via the CLI, restart the asterisk server `asterisk -rx "core restart now"`
+- run the software updates regularly, using the CLI commands `apt update` and `apt upgrade`
+
+### Setting up email forwarding
+
+I wanted emails from the server to be sent to my gmail address, which is super easy to do. The piece of software used for emails is called `Exim4`.
+
+1. Setup Exim4 to use Gmail as an external SMTP server, by running this in terminal:
+
+   `dpkg-reconfigure exim4-config`
+
+1. Choose the answers:
+
+   - Choose “mail sent by smarthost; received via SMTP or fetchmail”
+   - Set to “localhost” for “System mail name:”.
+   - Set to “127.0.0.1” for “IP-addresses to listen on for incoming SMTP connections” to
+     refuse external connections.
+   - Leave as empty for “Other destinations for which mail is accepted:”.
+   - Leave as empty for “Machines to relay mail for:”.
+   - Set to “smtp.gmail.com::587” for “IP address or host name of the outgoing smarthost:”.
+   - Choose “NO” for “Hide local mail name in outgoing mail?”.
+   - Choose “NO” for “Keep number of DNS-queries minimal (Dial-on-Demand)?”.
+   - Choose “mbox format in /var/mail/” for “Delivery method for local mail”.
+   - Choose “YES” for “Split configuration into small files?”.
+   - Enable 2-factor authentication on your Gmail account used for sending emails and follow Google instruction to create app specific password.
+   - Edit /etc/exim4/passwd.client and add the following line inside:
+     `smtp.gmail.com:<gmail-sender-account-name>:<your-app-password>`
+
+   You should use account name not email address here.
+
+1. If it is new or restored file then ensure the permissions are correct by running this in the terminal:
+   `chown root:Debian-exim /etc/exim4/passwd.client`
+   `chmod 640 /etc/exim4/passwd.client`
+1. You can also configure replacement of the local sender address to your Gmail one:
+   `echo '<local-user-name>: <gmail-sender-account-name>@gmail.com' >> /etc/email-addresses`
+   `echo '<local-user-name>@localhost: <gmail-sender-account-name>@gmail.com' >> /etc/email-addresses`
+   `echo '<local-user-name>@<hostname>: <gmail-sender-account-name>@gmail.com' >> /etc/email-addresses`
+
+1. Update Exim4 configuration, remove stale mail:
+   `update-exim4.conf`
+   `invoke-rc.d exim4 restart`
+   `exim4 -qff`
+
+1. Check that email is sent using:
+   `echo "Subj" | mail -s "Test email from Exim4" <email-address>`
+
+1. Check logs to see if email was sent successfully:
+   `less /var/log/exim4/mainlog`
+1. Check if email is received by <email-address>. If it is Gmail address you may need add filtering rule to prevent email be classified as a spam.
+
+1. In order to redirect the local mail to the external address, edit the `/etc/aliases` file and add the following line:
+   <local-user-name>: <email-address>
+
+   and execute:
+   `newaliases`
+
+   in order to update aliases configuration.
+
+Links:
+
+- [Debian Wiki Exim4 for Gmail](https://wiki.debian.org/Exim4Gmail)
+- [Gmail mail client setup](https://support.google.com/mail/answer/7104828?hl=en&visit_id=638300159533347627-1330126653&rd=3)
+- [Debian Wiki Exim4](https://wiki.debian.org/Exim)
+- [How to redirect local root mail](http://blog.bobbyallen.me/2013/02/03/how-to-redirect-local-root-mail-to-an-external-email-address-on-linux/)
 
 ### Directing calls to your new server
 
@@ -74,17 +146,17 @@ These are instructions using the UI that work with Voipfone.co.uk but should hop
 
 Once signed in as an admin in the UI:
 
-##### Chan pjsip 
+##### Chan pjsip
 
 1. Navigate to Trunks under the Connectivity tab
 1. Click 'Add Trunk' and select 'Add SIP (chan_pjsip) Trunk'
-1. Under the 'General' tab, set the trunk name and outbound CallerID as your voipfone SIP Username, under your Master Account > Phone Settings. 
+1. Under the 'General' tab, set the trunk name and outbound CallerID as your voipfone SIP Username, under your Master Account > Phone Settings.
 1. Under the pjsip Settings add the following:
-   * Username / Auth username: voipfone SIP Username
-   * Secret: the 'phone password' from voipfone, under the 'Phone settings'
-   * SIP Server: sip.voipfone.net
+   - Username / Auth username: voipfone SIP Username
+   - Secret: the 'phone password' from voipfone, under the 'Phone settings'
+   - SIP Server: sip.voipfone.net
 1. Under the advances tab add the following:
-   * Contact User/From User: voipfone SIP Username
+   - Contact User/From User: voipfone SIP Username
 1. Submit the form and click Apply Config
 
 ##### Outbound Route
@@ -101,18 +173,19 @@ Once signed in as an admin in the UI:
 1. The Destination option will point the caller to any feature you want (e.g announcement/IVR) you wish. Can be a standard Annoucnement for now if you haven't yet set anything up.
 1. Submit the form and click Apply Config
 
-Once this is done, you should be able to call your telephone number and be directed to whatever Inbound destination you chose. 
+Once this is done, you should be able to call your telephone number and be directed to whatever Inbound destination you chose.
 
 ### Customise your FreePBX
 
-#### Adding recordings
+#### Adding your own audio
 
 ##### UI
-Under the 'Admin' tab, the  'System Recordings' feature is where all of your custom recordings will live.
-Before you setup any announcements or other apps, record your audio and load them here. 
 
-* I've found `.wav` files easiest to work with
-* Save time by saving them as MONO,16bits at 8KHz, on your computer before uploading
+Under the 'Admin' tab, the 'System Recordings' feature is where all of your custom recordings will live.
+Before you setup any announcements or other apps, record your audio and load them here.
+
+- I've found `.wav` files easiest to work with
+- Save time by saving them as MONO,16bits at 8KHz, on your computer before uploading
 
 ##### CLI
 
@@ -122,9 +195,31 @@ If you think you've saved the audio in correct format already, you could copy th
 
 #### Setting up voicemail
 
-#### Setting up interactive calls 
+Voicemail inboxes belong to a User, who has an Extension.
 
-## Definitions
+1. Go to Connectivity > Extenstions > Add Extension > Add Virtual Extension
+1. Under 'User Extension' put a random single number, I just use 1 [1]
+1. Link to a default user - select 'Create new user' from the drop down
+1. Check 'custom username' if you want to set the username.
+1. Under 'Voicemail' tab:
+   - click yes to 'Enabled'
+   - add your email address to send voicemails
+   - change any other settings you'd like to configure
+   - You probably don't need VmX Locator
+1. Save and Apply Config
+
+You can manage that User later under Admin > User Management.
+
+You can now redirect IVRs, Announcements or calls to your voicemail. For example, try setting your Inbound Route from the last step to point to your user's voicemail as its Destination.
+
+##### CLI
+
+Voicemail announcement recordings are stored in `/var/spool/asterisk/voicemail/default/{user_id}` and called e.g. `unavail.wav`, `busy.wav`. So you can swap out those files with your own recordings via the terminal if you wish.
+
+[1] Note that this can effect your options when setting up an IVR - e.g. if your extension is `1` and an IVR option asks to press `1` it will auto redirect to that extension, but you can change that in the IVR settings.
+
+#### Setting up interactive voice responses (IVR)
+
 
 ## Links
 
