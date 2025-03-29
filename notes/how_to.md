@@ -220,6 +220,43 @@ Voicemail announcement recordings are stored in `/var/spool/asterisk/voicemail/d
 
 #### Setting up interactive voice responses (IVR)
 
+## Security
+
+### Setting up Fail2Ban
+
+This is a free piece of software that provides a little security agains things like web crawlers which could make brute force attacks on your server.
+
+I'm not an expert by any means, but here's what worked from me after looking at a few different resources online:
+
+1. Install Fail2Ban in the terminal with this command `apt -y install fail2ban`
+1. Add security logs to Asterisk
+   - Edit the file `nano /etc/asterisk/logger.conf`
+   - In the [logfiles] section, add `security` to both `messages` and `console`
+   - In the [general] section, uncomment the default time format: `dateformat=%F %T ; ISO 8601 date format`
+   - Run `asterisk -rx 'logger reload'` to reload
+1. Setup a `jail` for Asterisk
+   - `nano /etc/fail2ban/jail.d/asterisk-jail.conf` and add the following:
+     ```
+     [asterisk]
+     enabled = true
+     logpath  = /var/log/asterisk/security
+     action = iptables-allports[name=ASTERISK, protocol=all]
+     maxretry = 5
+     bantime = 60
+     ```
+   - I had to run `touch /var/log/asterisk/security` before that would work to create the log file.
+1. Setup a `jail` for ssh
+   - `nano /etc/fail2ban/jail.d/ssh-jail.conf` and add
+   ```
+   [sshd]
+   enabled = true
+   mode = normal
+   maxretry = 5
+   bantime = 60
+   ```
+1. Run `systemctl start fail2ban` and `fail2ban-client status` to see that your two jails were setup correctly.
+
+[I found this article quite helpful](https://hotkey404.com/asterisk-security-blocking-network-attacks-with-fail2ban/)
 
 ## Links
 
