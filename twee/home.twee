@@ -13,14 +13,14 @@ Home Phone
 
 :: footer
 <footer>
-    <p>0117 214 1269</p>
+    <p>&#128222 Call me if you'd prefer to listen: 0117 214 1269 &#128222</p>
     <p>we're currently prototyping ths project! pls get in touch at machinestreams@protonmail.com if you'd like to know more</a>.
     <p>this phone is hosted from a living room in Bristol, UK. It is a DIY <a src="https://areyoubeingserved.constantvzw.org/Summit_afterlife.xhtml">feminist server</a>.
     <p>made by <a src="https://mas.to/@harriethw">HarrietHW</a></p>
     <p>[want to build your own home phone?](https://github.com/Harriethw/home-phone/blob/main/notes/how_to.md) </p>
+    <img alt="nineties purple home phone" src="assets/phones/phone_purple.webp" class="image-small">
     <p>this site is built with <a src="http://www.motoslave.net/tweego/">Tweego</a></p>
     <p>the phone server is running on <a src="https://www.freepbx.org/">FreePBX</a></p>
-    <img alt="nineties purple home phone" src="assets/phones/phone_purple.webp" class="image-small">
 </footer>
 
 :: Home
