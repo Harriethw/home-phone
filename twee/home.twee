@@ -24,7 +24,7 @@ Home Phone
 </footer>
 
 :: Home
-<img alt="grainy photo of a brick wall" src="assets/wall.webp" class="cover">
+<img alt="grainy photo of a brick wall" src="assets/suburbs.webp" class="cover">
 <div class="header_wrapper">
     <div class="header_sub">
         <h2>HOME PHONE</h2>

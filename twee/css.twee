@@ -28,8 +28,6 @@ body {
     background: white;
     background-size: 40px 40px;
     background-position: -19px -19px;
-    background-image: linear-gradient(to right, #F5F5F5 1px, transparent 1px),
-        linear-gradient(to bottom, #F5F5F5 1px, transparent 1px);
 }
 
 .button__next {
