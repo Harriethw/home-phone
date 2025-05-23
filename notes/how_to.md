@@ -220,6 +220,25 @@ Voicemail announcement recordings are stored in `/var/spool/asterisk/voicemail/d
 
 #### Setting up interactive voice responses (IVR)
 
+IVR's can allow the caller to interact with the server by pressing buttons - e.g. "Press 3 to go to the menu".
+
+If you are getting pretty advanced with Asterisk then you can edit the code directly and start adding your own config here `/etc/asterisk/extensions_custom.conf` - but the easiest way is via the FreePBX UI.
+
+Go to Applications > IVR > Add IVR
+
+This gives you a nice menu to programme the behaviour of your IVR. You could have one layer of an IVR that allows users to press a button and play a recording, or you could chain IVRs so that one button leads to another menu of options. A few key things:
+
+* Annoucement - this is the audio played at the beginning of the IVR
+* Enable Direct Dial - You will want this to be set to "No" if you don't want users to be able to call a voicemail inbox
+* Timeout - there's a few different options for how you handle timeout, e.g. if a caller hasn't pressed any buttons
+* Invalid - same for if they press an invalid button
+* Returning to the IVR - Once all options have been played out, or a timeout or invalid entry has occurred you can return the user to the beginning of the IVR
+* IVR entries and Destinations - I found it easiest to program the IVR destinations as Announcements, rather than directly play system recordings. For some reason the behaviour wasn't super clear when just playing recordings. You can setup Announcements via the Application menu as well, and programme their destinations and behaviour individually.
+
+### Example IVR in code
+
+TBC!!
+
 ## Security
 
 ### Setting up Fail2Ban
