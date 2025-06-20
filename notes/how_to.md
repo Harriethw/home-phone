@@ -228,16 +228,41 @@ Go to Applications > IVR > Add IVR
 
 This gives you a nice menu to programme the behaviour of your IVR. You could have one layer of an IVR that allows users to press a button and play a recording, or you could chain IVRs so that one button leads to another menu of options. A few key things:
 
-* Annoucement - this is the audio played at the beginning of the IVR
-* Enable Direct Dial - You will want this to be set to "No" if you don't want users to be able to call a voicemail inbox
-* Timeout - there's a few different options for how you handle timeout, e.g. if a caller hasn't pressed any buttons
-* Invalid - same for if they press an invalid button
-* Returning to the IVR - Once all options have been played out, or a timeout or invalid entry has occurred you can return the user to the beginning of the IVR
-* IVR entries and Destinations - I found it easiest to program the IVR destinations as Announcements, rather than directly play system recordings. For some reason the behaviour wasn't super clear when just playing recordings. You can setup Announcements via the Application menu as well, and programme their destinations and behaviour individually.
+- Announcement - this is the audio played at the beginning of the IVR
+- Enable Direct Dial - You will want this to be set to "No" if you don't want users to be able to call a voicemail inbox
+- Timeout - there's a few different options for how you handle timeout, e.g. if a caller hasn't pressed any buttons
+- Invalid - same for if they press an invalid button
+- Returning to the IVR - Once all options have been played out, or a timeout or invalid entry has occurred you can return the user to the beginning of the IVR
+- IVR entries and Destinations - I found it easiest to program the IVR destinations as Announcements, rather than directly play system recordings. For some reason the behaviour wasn't super clear when just playing recordings. You can setup Announcements via the Application menu as well, and programme their destinations and behaviour individually.
 
 ### Example IVR in code
 
-TBC!!
+## Creating an extension that loops through a set of recordings and plays them
+
+This is quite a specific use case but I thought it might be useful as an example of custom code that can be written.
+I wanted to provide a service where users could leave a voicemail, and then press a button to listen to random voicemails from other people.
+I put the following in the extensions_custom.conf file
+
+```
+;-------------------------------------------------------------------------------
+; play-voicemail-custom:
+;
+; Custom extension to play user 1's voicemail
+;
+[play-voicemail-custom]
+exten => playmail,1,Answer()
+exten => playmail,2,Set(RANDSOUND=${SHELL(ls /var/spool/asterisk/voicemail/default/1/INBOX | shuf -n 1 | head -n1 | cut -$ cut -f1 -d"." | tr -d "\n")})
+exten => playmail,3,NoOp(*${RANDSOUND}*)
+exten => playmail,4,Playback(${RANDSOUND})
+exten => playmail,5,Goto(2)
+exten => playmail,n,Hangup()
+;-------------------------------------------------------------------------------
+
+```
+
+This creates a new extension called play-voicemail-custom
+On answering, it grabs a random audio file from the Inbox of user 1, plays the file, then once played goes back to step 2.
+To have this extensions recognised, run `fwconsole reload` as the root user. 
 
 ## Security
 
