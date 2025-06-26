@@ -133,6 +133,7 @@ I wanted emails from the server to be sent to my gmail address, which is super e
 Links:
 
 - [Debian Wiki Exim4 for Gmail](https://wiki.debian.org/Exim4Gmail)
+- [Gmail setup app password](https://myaccount.google.com/apppasswords)
 - [Gmail mail client setup](https://support.google.com/mail/answer/7104828?hl=en&visit_id=638300159533347627-1330126653&rd=3)
 - [Debian Wiki Exim4](https://wiki.debian.org/Exim)
 - [How to redirect local root mail](http://blog.bobbyallen.me/2013/02/03/how-to-redirect-local-root-mail-to-an-external-email-address-on-linux/)
@@ -218,7 +219,7 @@ Voicemail announcement recordings are stored in `/var/spool/asterisk/voicemail/d
 
 [1] Note that this can effect your options when setting up an IVR - e.g. if your extension is `1` and an IVR option asks to press `1` it will auto redirect to that extension, but you can change that in the IVR settings.
 
-#### Setting up interactive voice responses (IVR)
+### Setting up interactive voice responses (IVR)
 
 IVR's can allow the caller to interact with the server by pressing buttons - e.g. "Press 3 to go to the menu".
 
@@ -235,9 +236,9 @@ This gives you a nice menu to programme the behaviour of your IVR. You could hav
 - Returning to the IVR - Once all options have been played out, or a timeout or invalid entry has occurred you can return the user to the beginning of the IVR
 - IVR entries and Destinations - I found it easiest to program the IVR destinations as Announcements, rather than directly play system recordings. For some reason the behaviour wasn't super clear when just playing recordings. You can setup Announcements via the Application menu as well, and programme their destinations and behaviour individually.
 
-### Example IVR in code
+#### Example IVR in code
 
-## Creating an extension that loops through a set of recordings and plays them
+##### Creating an extension that loops through a set of recordings and plays them
 
 This is quite a specific use case but I thought it might be useful as an example of custom code that can be written.
 I wanted to provide a service where users could leave a voicemail, and then press a button to listen to random voicemails from other people.
@@ -251,18 +252,26 @@ I put the following in the extensions_custom.conf file
 ;
 [play-voicemail-custom]
 exten => playmail,1,Answer()
-exten => playmail,2,Set(RANDSOUND=${SHELL(ls /var/spool/asterisk/voicemail/default/1/INBOX | shuf -n 1 | head -n1 | cut -$ cut -f1 -d"." | tr -d "\n")})
+exten => playmail,2,Set(RANDSOUND=/var/spool/asterisk/voicemail/default/1/INBOX/${SHELL(ls /var/spool/asterisk/voicemail/default/1/INBOX | shuf -n 1 | head -n1 | cut -f1 -d".")})
 exten => playmail,3,NoOp(*${RANDSOUND}*)
-exten => playmail,4,Playback(${RANDSOUND})
+exten => playmail,4,Background(${RANDSOUND})
 exten => playmail,5,Goto(2)
+exten => _.,1,Goto(ivr-1,s,1)
 exten => playmail,n,Hangup()
 ;-------------------------------------------------------------------------------
+
 
 ```
 
 This creates a new extension called play-voicemail-custom
 On answering, it grabs a random audio file from the Inbox of user 1, plays the file, then once played goes back to step 2.
-To have this extensions recognised, run `fwconsole reload` as the root user. 
+To have this extensions recognised, run `fwconsole reload` as the root user.
+
+Once this is done, you need to navigate in the UI to setup a Custom Destination, under the Admin tab.
+
+Set the target as `play-voicemail-custom,playmail,1`.
+
+The first part is the name of the extension in square brackets above, then the extensions 'number' is playmail, and it simulates pressing 1, or going to the first step.
 
 ## Security
 
@@ -305,3 +314,4 @@ I'm not an expert by any means, but here's what worked from me after looking at 
 ## Links
 
 - Setup FreePBX with a 3G Dongle https://github.com/MatejKovacic/RasPBX-install
+- Great summary of top level Asterisk knowledge https://geek-university.com/asterisk-course/
