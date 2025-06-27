@@ -1,6 +1,15 @@
 # How to build your own DIY telephone server
 
-## Introduction - why do this?
+1. [Introduction](#introduction)
+1. [Things you'll need](#things-youll-need-for-this-guide)
+1. [Build your server](#build-your-server)
+1. [Security](#security)
+   - [Setting up email forwarding](#setting-up-email-forwarding)
+   - [Directing calls to your new server](#directing-calls-to-your-new-server)
+   - [Setting up voicemail](#setting-up-voicemail)
+1. [Links](#links)
+
+## Introduction
 
 This is a quick beginner's guide to get up and running with self-hosting your
 own telephone server - using (mostly) free, open source, software.
